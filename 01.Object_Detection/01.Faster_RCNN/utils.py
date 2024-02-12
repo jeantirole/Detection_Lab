@@ -146,7 +146,7 @@ def gen_anc_base(anc_pts_x, anc_pts_y, anc_scales, anc_ratios, out_size):
 
             anc_base[:, ix, jx, :] = ops.clip_boxes_to_image(anc_boxes, size=out_size)
             
-    return anc_base
+    return anc_base 
 
 def get_iou_mat(batch_size, anc_boxes_all, gt_bboxes_all):
     
