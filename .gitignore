@@ -2,3 +2,6 @@
 *.xml
 *.npy
 *.txt
+*.gz
+*.tgz
+00.Data
