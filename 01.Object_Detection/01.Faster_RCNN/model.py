@@ -47,8 +47,10 @@ class ProposalModule(nn.Module):
             # get conf scores 
             conf_scores_pos = conf_scores_pred.flatten()[pos_anc_ind]
             conf_scores_neg = conf_scores_pred.flatten()[neg_anc_ind]
+
             # get offsets for +ve anchors
             offsets_pos = reg_offsets_pred.contiguous().view(-1, 4)[pos_anc_ind]
+            
             # generate proposals using offsets
             proposals = generate_proposals(pos_anc_coords, offsets_pos)
             

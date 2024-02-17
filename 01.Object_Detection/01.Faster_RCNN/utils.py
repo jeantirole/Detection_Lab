@@ -174,6 +174,7 @@ def get_req_anchors(anc_boxes_all, gt_bboxes_all, gt_classes_all, pos_thresh=0.7
     ------
     anc_boxes_all - torch.Tensor of shape (B, w_amap, h_amap, n_anchor_boxes, 4)
         all anchor boxes for a batch of images
+    
     gt_bboxes_all - torch.Tensor of shape (B, max_objects, 4)
         padded ground truth boxes for a batch of images
     gt_classes_all - torch.Tensor of shape (B, max_objects)
@@ -185,14 +186,19 @@ def get_req_anchors(anc_boxes_all, gt_bboxes_all, gt_classes_all, pos_thresh=0.7
         flattened positive indices for all the images in the batch
     negative_anc_ind - torch.Tensor of shape (n_pos,)
         flattened positive indices for all the images in the batch
+        
     GT_conf_scores - torch.Tensor of shape (n_pos,), IoU scores of +ve anchors
+    
     GT_offsets -  torch.Tensor of shape (n_pos, 4),
         offsets between +ve anchors and their corresponding ground truth boxes
     GT_class_pos - torch.Tensor of shape (n_pos,)
         mapped classes of +ve anchors
+    
     positive_anc_coords - (n_pos, 4) coords of +ve anchors (for visualization)
     negative_anc_coords - (n_pos, 4) coords of -ve anchors (for visualization)
     positive_anc_ind_sep - list of indices to keep track of +ve anchors
+       
+    
     '''
     # get the size and shape parameters
     B, w_amap, h_amap, A, _ = anc_boxes_all.shape
