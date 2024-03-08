@@ -106,7 +106,7 @@ def project_bboxes(bboxes, width_scale_factor, height_scale_factor, mode='a2p'):
     return proj_bboxes
 
 def generate_proposals(anchors, offsets):
-   
+    
     # change format of the anchor boxes from 'xyxy' to 'cxcywh'
     anchors = ops.box_convert(anchors, in_fmt='xyxy', out_fmt='cxcywh')
 
