@@ -7,5 +7,6 @@
 *.pt
 *.zip
 *.pth
+*.pt
 00.Data
 /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/01.Models/04.SAM_fine/wandb

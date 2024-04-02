@@ -27,15 +27,15 @@ class SamRS(torch.nn.Module):
                 nn.Conv2d(self.encoder.out_channels[2], classes1, kernel_size=1)
             )
 
-        self.semseghead_2 = nn.Sequential(
-                nn.Dropout2d(0.1),
-                nn.Conv2d(self.encoder.out_channels[2], classes2, kernel_size=1)
-            )
+        # self.semseghead_2 = nn.Sequential(
+        #         nn.Dropout2d(0.1),
+        #         nn.Conv2d(self.encoder.out_channels[2], classes2, kernel_size=1)
+        #     )
 
-        self.semseghead_3 = nn.Sequential(
-                nn.Dropout2d(0.1),
-                nn.Conv2d(self.encoder.out_channels[2], classes3, kernel_size=1)
-            )
+        # self.semseghead_3 = nn.Sequential(
+        #         nn.Dropout2d(0.1),
+        #         nn.Conv2d(self.encoder.out_channels[2], classes3, kernel_size=1)
+        #     )
     
     def forward(self,x):
         features = self.encoder(x)
