@@ -1,0 +1,2 @@
+epoch : 0 iter : 0 loss: 7.29204 dice: 0.00000 loss_percept: 6.57807
+epoch : 0 iter : 1 loss: 7.40257 dice: 0.00000 loss_percept: 6.71254
