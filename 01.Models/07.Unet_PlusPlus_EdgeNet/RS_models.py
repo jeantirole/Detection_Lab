@@ -47,15 +47,15 @@ class CombinedModel(nn.Module):
 
 
     
-    def forward(self, img,stacked_mask ):
+    def forward(self, img, mask ):
 
         #---------       
         outputs = self.model1(img)
         
         #perceptual loss from edge_net
-        layer_1_out,layer_2_out,layer_3_out = self.model2(outputs)
+        layer_1_out,layer_2_out,layer_3_out = self.model2.forward_freeze(outputs)
         
-        layer_1_gt ,layer_2_gt ,layer_3_gt  = self.model2(stacked_mask)
+        layer_1_gt ,layer_2_gt ,layer_3_gt  = self.model2.forward_freeze(mask)
         
         loss_1 = torch.nn.functional.l1_loss(layer_1_out, layer_1_gt,reduction='mean')
         loss_2 = torch.nn.functional.l1_loss(layer_2_out, layer_2_gt,reduction='mean')
