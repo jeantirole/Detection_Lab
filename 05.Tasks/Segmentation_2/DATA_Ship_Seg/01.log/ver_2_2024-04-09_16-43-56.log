@@ -1,0 +1,9 @@
+{'epoch': 0, 'iteration': 0, 'loss': '1.36906', 'dice': '0.08815', 'lr': 0.0001}
+{'epoch': 0, 'iteration': 0, 'loss': '1.27746', 'dice': '0.06201', 'lr': 0.0001}
+{'epoch': 0, 'iteration': 1, 'loss': '1.25151', 'dice': '0.06426', 'lr': 0.0001}
+{'epoch': 0, 'iteration': 3, 'loss': '1.20439', 'dice': '0.07766', 'lr': 0.0001}
+{'epoch': 0, 'iteration': 6, 'loss': '1.17589', 'dice': '0.06723', 'lr': 0.0001}
+{'epoch': 0, 'iteration': 10, 'loss': '1.10406', 'dice': '0.21423', 'lr': 0.0001}
+{'epoch': 0, 'iteration': 15, 'loss': '1.10931', 'dice': '0.12101', 'lr': 0.0001}
+{'epoch': 0, 'iteration': 21, 'loss': '1.05908', 'dice': '0.16771', 'lr': 0.0001}
+{'epoch': 0, 'iteration': 28, 'loss': '1.08486', 'dice': '0.09613', 'lr': 0.0001}
