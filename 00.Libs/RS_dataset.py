@@ -1727,7 +1727,7 @@ class MaskDataset(object):
         img_path = os.path.join(self.path, file_image)
         
         if 'test' in self.path:
-            label_path = os.path.join("test_annotations/", file_label)
+            label_path = os.path.join("/mnt/hdd/eric/.tmp_ipy/00.Data/FaceMaskDetection/test_annotations/", file_label)
         else:
             label_path = os.path.join("/mnt/hdd/eric/.tmp_ipy/00.Data/FaceMaskDetection/annotations/", file_label)
 
