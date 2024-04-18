@@ -935,3 +935,67 @@ def compute_ap(recall, precision):
     # and sum (\Delta recall) * prec
     ap = np.sum((mrec[i + 1] - mrec[i]) * mpre[i + 1])
     return ap
+
+
+
+
+
+#---
+
+def draw_mask(image, mask_generated) :
+    
+    '''
+    ref : https://inside-machinelearning.com/en/plot-segmentation-mask/
+    
+    image shape : (573, 763, 3)
+    mask shape  : (573, 763, 3)
+    
+    '''
+    masked_image = image.copy()
+    
+    if len(mask_generated.shape) == 2:
+        mask_generated = np.stack((mask_generated,mask_generated,mask_generated),axis=-1)
+
+    masked_image = np.where(mask_generated.astype(int),
+                            np.array([0,255,0], dtype='uint8'),
+                            masked_image)
+
+    masked_image = masked_image.astype(np.uint8)
+
+    return cv2.addWeighted(image, 0.3, masked_image, 0.7, 0)
+
+
+def draw_masks_fromList(image, masks_generated, labels, colors) :
+    
+    '''
+    # image 
+    => (h , w , c)
+    
+    # masks_generated
+    
+    single mask shape
+     =>([ number of obejcts , 823, 1171])
+    masks_generated = [i for i in qa]
+    
+    # LABELS = [[0], [0]] # 0 for bird, 1 for
+     
+    # COLORS = [(255,0,0),(255,255,0)] 
+    
+    '''
+    masked_image = image.copy()
+    for i in range(len(masks_generated)) :
+        picked_color =colors[((i+1) % len(colors))]
+        print(picked_color)
+        masked_image = np.where(np.repeat(masks_generated[i][:, :, np.newaxis], 3, axis=2),
+                                #-- color iteration n ignore label 
+                                np.asarray( picked_color, dtype='uint8'),
+                                
+                                #np.asarray(colors[int(labels[  (len(colors)) % (i+1) ][-1])], dtype='uint8'),
+                                
+                                #-- fix one color 
+                                #(255,0,0),
+                                masked_image)
+
+        masked_image = masked_image.astype(np.uint8)
+
+    return cv2.addWeighted(image, 0.3, masked_image, 0.7, 0)

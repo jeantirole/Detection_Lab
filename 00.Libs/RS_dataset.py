@@ -1207,6 +1207,131 @@ class Seg_RS_dataset_edge_v5():
         return images, targets
     
     
+#------------------------------------ 
+
+
+class Seg_RS_dataset_edge_v6():
+    def __init__(self, 
+                 img_dir,
+                 mask_dir, 
+                 image_resize,
+                 crop_size,
+                 phase,
+                 palette,
+                 edge_return,
+                 mask_onehot):
+        
+        self.phase = phase
+        self.image_files = img_dir
+        self.mask_files = mask_dir
+        self.edge_return = edge_return
+        self.mask_onehot_return = mask_onehot
+
+        assert len(self.image_files) == len(self.mask_files)
+
+        self.IMAGE_SIZE = image_resize #224 => 250
+        
+        self.palette = palette
+        
+        self.trans_ = Compose([ 
+                RandomCrop(height=crop_size,width=crop_size, always_apply=True),
+                VerticalFlip(p=0.5),
+                HorizontalFlip(p=0.5),
+                RandomRotate90(p=0.5),
+                ])
+        
+        self.trans_normalizer  = transforms.Compose([
+                transforms.ToTensor(),
+                transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+                ])
+    
+
+    def __len__(self):
+        return len(self.image_files)
+
+    def build_transformer_normalize(self):
+        transformer = transforms.Compose([
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
+    ])
+        return transformer
+
+    def convert_to_target_(self, mask_image, IMAGE_SIZE):
+        #print(mask_image.shape)
+        mask_image = np.asarray(mask_image)
+
+        canvas = np.zeros( (mask_image.shape[0],mask_image.shape[1]) ,  dtype=np.uint8)
+        for k,v in self.palette.items():
+            canvas[np.all(mask_image == v, axis=-1)] = k
+
+        return canvas
+    
+    def mask_onehot(self, mask):
+        mask = mask.to(torch.int64)
+        mask = mask.squeeze(0)
+        mask = torch.nn.functional.one_hot(mask, num_classes=len(self.palette.keys()))
+        mask = mask.permute(2,0,1)
+        
+        return mask
+
+    def __getitem__(self, index):
+
+        # image
+        image = cv2.imread( self.image_files[index] )
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        if self.IMAGE_SIZE != None:
+            image = cv2.resize(image, dsize=(self.IMAGE_SIZE,self.IMAGE_SIZE), interpolation=cv2.INTER_LINEAR)
+
+        # mask
+        mask = cv2.imread( self.mask_files[index] )
+        mask = cv2.cvtColor(mask, cv2.COLOR_BGR2RGB)
+        if self.IMAGE_SIZE != None:
+            mask = cv2.resize(mask, dsize=(self.IMAGE_SIZE,self.IMAGE_SIZE), interpolation=cv2.INTER_NEAREST) # inter nearest
+        
+        # build normalize
+        normalizer = self.trans_normalizer
+
+        if self.phase=='train':
+                
+            #----- aug 
+            augmented = self.trans_(image=image,mask=mask)
+            image= augmented['image']
+            mask = augmented['mask']
+
+            #----- processing 
+            image = normalizer(image)
+            
+            mask = self.convert_to_target_(mask, self.IMAGE_SIZE)
+            mask = torch.from_numpy(mask).long()     
+            
+            if self.edge_return:
+                mask_edge = RS_utils.label_to_edge(mask,3)
+                mask_edge = torch.from_numpy(mask_edge) # edge type is important for BCE, target should be long. ? or float ? 
+                mask_edge = mask_edge.unsqueeze(0).float()    
+            
+            #----- onehot decision
+            if self.mask_onehot_return:
+                mask = self.mask_onehot(mask)     
+            
+            
+            #----- type decision 
+            # mask = mask.float()              
+            # cross entropy needs scalar 
+            
+            return image, mask
+            
+    
+    def collate_fn(self,batch):
+        images = []
+        targets = []
+        for a, b in batch:
+            
+            images.append(a)
+            targets.append(b)
+        images = torch.stack(images, dim=0)
+        targets = torch.stack(targets, dim=0)
+
+        return images, targets
     
 
 
