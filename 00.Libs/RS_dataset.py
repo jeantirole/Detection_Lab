@@ -1868,10 +1868,69 @@ class MaskDataset(object):
     def __len__(self): 
         return len(self.imgs)
     
+ 
+
+class MaskDataset_v1(object):
+    def __init__(self, transforms, path, aug):
+        '''
+        path: path to train folder or test folder
+        '''
+        # transform module과 img path 경로를 정의
+        self.transforms = transforms
+        self.aug = aug
+        self.path = path
+        self.imgs = list(sorted(os.listdir(self.path)))
+
+
+    def __getitem__(self, idx): #special method
+        # load images ad masks
+        file_image = self.imgs[idx]
+        file_label = self.imgs[idx][:-3] + 'xml'
+        img_path = os.path.join(self.path, file_image)
+        
+        if 'test' in self.path:
+            label_path = os.path.join("/mnt/hdd/eric/.tmp_ipy/00.Data/FaceMaskDetection/test_annotations/", file_label)
+        else:
+            label_path = os.path.join("/mnt/hdd/eric/.tmp_ipy/00.Data/FaceMaskDetection/annotations/", file_label)
+
+        img = Image.open(img_path).convert("RGB")
+        
+        
+        #Generate Label
+        target = RS_utils.generate_target(label_path)
+
+        #-- aug 
+        if self.aug is not None:
+            box_, category_ids = target["boxes"], target['labels']
+            
+            img = np.asarray(img)            
+            #new_box = [box_[0],box_[1],box_[2],box_[3]]
+            transformed  = self.aug(image = img, bboxes = box_,category_ids = category_ids)
+            img = transformed['image']
+            
+        if self.transforms is not None:
+            img = self.transforms(img)
+        
+    
+        target['boxes']  = transformed['bboxes']
+        target['labels'] = transformed['category_ids']
+
+        return img, target
+
+    def __len__(self): 
+        return len(self.imgs)
+    
+
+#----
+# FasterRCNN(
+#   (transform): GeneralizedRCNNTransform(
+#       Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+#       Resize(min_size=(800,), max_size=1333, mode='bilinear')
+#   )
 
 
 
-#-------
+
 
 
 class Detection_Dataset_v3(Dataset):
@@ -1893,8 +1952,6 @@ class Detection_Dataset_v3(Dataset):
         self.image_size = image_size
         self.scale = 1.0
 
-        # 이미지에 padding을 적용하여 종횡비를 유지시키면서 크기가 600x600 되도록 resize 합니다.
-        # padding 종횡비가 문제였을까? 모델이 제대로 학습되지 않았음. 
         self.train_transforms = A.Compose([
                             A.Resize(self.image_size,self.image_size,interpolation=cv2.INTER_LINEAR),
                             A.HorizontalFlip(p=0.5)],
@@ -1913,22 +1970,6 @@ class Detection_Dataset_v3(Dataset):
     def __len__(self):
         return len(self.images)
 
-    def parse_voc_xml(self, node: ET.Element) -> Dict[str, Any]: # xml => dict
-        voc_dict: Dict[str, Any] = {}
-        children = list(node)
-        if children:
-            def_dic: Dict[str, Any] = collections.defaultdict(list)
-            for dc in map(self.parse_voc_xml, children):
-                for ind, v in dc.items():
-                    def_dic[ind].append(v)
-            if node.tag == "annotation":
-                def_dic["object"] = [def_dic["object"]]
-            voc_dict = {node.tag: {ind: v[0] if len(v) == 1 else v for ind, v in def_dic.items()}}
-        if node.text:
-            text = node.text.strip()
-            if not children:
-                voc_dict[node.tag] = text
-        return voc_dict
     
     def __getitem__(self, index):
         
@@ -1960,37 +2001,104 @@ class Detection_Dataset_v3(Dataset):
             img = normalizer(img)
             
         
-        #-- box, label to tensor         
-        targets = torch.as_tensor(targets, dtype=torch.float32) 
-        labels = torch.as_tensor(labels, dtype=torch.int64) 
+        #-- box, label to tensor 
+        targets = torch.tensor(targets)
+        labels = torch.tensor(labels)
         
-        target_ = {}
-        target_["boxes"] = targets
-        target_["labels"] = labels
-        
-        
-        return img, target_
+        return img, targets, labels
     
-    def collate_fn(self,batch):        
-        # def collate_fn(self,batch):
-        # img_data_all = []
-        # gt_boxes_all = []
-        # gt_idxs_all = []
+    def collate_fn(self,batch):
+        img_data_all = []
+        gt_boxes_all = []
+        gt_idxs_all = []
         
-        # #gt_boxes_all, gt_classes_all, img_paths = parse_annotation(self.annotation_path, self.img_dir, self.img_size)
-        # for a,b,c in batch:
-        #     #---
-        #     img_data_all.append(a)
-        #     gt_boxes_all.append(b)
-        #     gt_idxs_all.append(c)
+        #gt_boxes_all, gt_classes_all, img_paths = parse_annotation(self.annotation_path, self.img_dir, self.img_size)
+        for a,b,c in batch:
+            #---
+            img_data_all.append(a)
+            gt_boxes_all.append(b)
+            gt_idxs_all.append(c)
         
-        # # pad bounding boxes and classes so they are of the same size
-        # gt_bboxes_pad = pad_sequence(gt_boxes_all, batch_first=True, padding_value=-1)
-        # gt_classes_pad = pad_sequence(gt_idxs_all, batch_first=True, padding_value=-1)
+        # pad bounding boxes and classes so they are of the same size
+        gt_bboxes_pad = pad_sequence(gt_boxes_all, batch_first=True, padding_value=-1)
+        gt_classes_pad = pad_sequence(gt_idxs_all, batch_first=True, padding_value=-1)
         
-        # # stack all images
-        # img_data_stacked = torch.stack(img_data_all, dim=0)
+        # stack all images
+        img_data_stacked = torch.stack(img_data_all, dim=0)
         
-        # return img_data_stacked.to(dtype=torch.float32), gt_bboxes_pad, gt_classes_pad
-        return tuple(zip(*batch))
+        return img_data_stacked.to(dtype=torch.float32), gt_bboxes_pad, gt_classes_pad
+
+
+
+
+
+#-------
+class MaskDataset_v2(object):
+    def __init__(self, transforms, path, aug):
+        '''
+        path: path to train folder or test folder
+        '''
+        # transform module과 img path 경로를 정의
+        self.transforms = transforms
+        self.aug = aug
+        self.path = path
+        self.imgs = list(sorted(os.listdir(self.path)))
+
+
+    def __getitem__(self, idx): #special method
+        #-- load images ad masks
+        file_image = self.imgs[idx]
+        file_label = self.imgs[idx][:-3] + 'xml'
+        img_path = os.path.join(self.path, file_image)
+        
+        if 'test' in self.path:
+            label_path = os.path.join("/mnt/hdd/eric/.tmp_ipy/00.Data/FaceMaskDetection/test_annotations/", file_label)
+        else:
+            label_path = os.path.join("/mnt/hdd/eric/.tmp_ipy/00.Data/FaceMaskDetection/annotations/", file_label)
+
+        img = Image.open(img_path).convert("RGB")
+        
+        #-- Generate Label
+        target = RS_utils.generate_target(label_path)
+        
+
+        #-- aug 
+        if self.aug is not None:
+            box_, category_ids = target["boxes"], target['labels']
+            
+            img = np.asarray(img)            
+            #new_box = [box_[0],box_[1],box_[2],box_[3]]
+            transformed  = self.aug(image = img, bboxes = box_,category_ids = category_ids)
+            img = transformed['image']
+            
+        if self.transforms is not None:
+            img = self.transforms(img)
     
+        boxes  = torch.tensor(transformed['bboxes'])
+        labels = torch.tensor(transformed['category_ids'])
+        
+        return img, boxes,labels 
+
+    def __len__(self): 
+        return len(self.imgs)
+    
+    def collate_fn(self,batch):
+        img_data_all = []
+        gt_boxes_all = []
+        gt_idxs_all = []
+        
+        #gt_boxes_all, gt_classes_all, img_paths = parse_annotation(self.annotation_path, self.img_dir, self.img_size)
+        for a,b,c in batch:
+            #---
+            img_data_all.append(a)
+            gt_boxes_all.append(b)
+            gt_idxs_all.append(c)
+        
+        # pad bounding boxes and classes so they are of the same size
+        gt_bboxes_pad = pad_sequence(gt_boxes_all, batch_first=True, padding_value=-1)
+        gt_classes_pad = pad_sequence(gt_idxs_all, batch_first=True, padding_value=-1)
+        
+        # stack all images
+        img_data_stacked = torch.stack(img_data_all, dim=0)
+        
+        return img_data_stacked.to(dtype=torch.float32), gt_bboxes_pad, gt_classes_pad

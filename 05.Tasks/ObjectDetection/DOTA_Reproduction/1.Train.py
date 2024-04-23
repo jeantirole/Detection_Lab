@@ -59,10 +59,10 @@ EXEC_VER = 0 # zero means test
 DDP = False
 TASK = "FACE_Detection"
 #-- args data
-IMAGE_SIZE = 512
+#IMAGE_SIZE = 600
 #-- args modeling 
 MODEL_NAME = "FasterRCNN"
-BATCH_SIZE = 6 
+BATCH_SIZE = 4 
 LEARNING_RATE = 0.005 
 N_CLASSES = 4
 #-- args train
@@ -85,8 +85,6 @@ logger = RS_utils.log_creator(log_path)
 data_transform = transforms.Compose([  
         transforms.ToTensor() 
     ])
-
-
 
 def collate_fn(batch):
     return tuple(zip(*batch))
@@ -111,6 +109,8 @@ def get_model_instance_segmentation(num_classes):
 
 
 model = get_model_instance_segmentation(N_CLASSES)
+model.transform = None
+print(model)
 
 model.to(DEVICE)
 

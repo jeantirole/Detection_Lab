@@ -994,8 +994,76 @@ def draw_masks_fromList(image, masks_generated, labels, colors) :
                                 
                                 #-- fix one color 
                                 #(255,0,0),
-                                masked_image)
-
+                                masked_image)                                                                                             
         masked_image = masked_image.astype(np.uint8)
 
     return cv2.addWeighted(image, 0.3, masked_image, 0.7, 0)
+
+
+
+#----------------------------------------------
+# Dota Visualization
+
+def read_txt(file_path):
+    with open(file_path, "r",encoding='utf-8',errors='ignore') as file:
+        lines = file.readlines()
+
+    return lines
+
+
+
+
+
+
+
+
+
+
+
+
+# # Box Matching 
+# Image.MAX_IMAGE_PIXELS = 933120000
+# thr =0.55 
+
+# for i in range(0,5):
+#     thr += 0.05
+#     print(thr)
+
+    
+#     img_path = args.img_path
+#     img_ = Image.open(img_path)
+#     plt.figure(figsize=(18,18))
+#     plt.imshow(img_)
+
+#     ax = plt.gca()
+
+
+#     bboxes_ = [] 
+#     cnt = 0
+#     for r in result[0]:
+#         if r[-1] > thr:
+#             cnt+=1
+#             bboxes_.append(r)
+#     #result[0][-1][-1]
+
+
+#     for box_ in bboxes_:
+#         x = box_[0]
+#         y = box_[1]
+#         width = box_[2]
+#         height = box_[3]
+#         angle_ = box_[4]
+
+#         # model 의 객체좌표가 center 중심인데, patches.Rectangle 은 좌하단을 기준점으로 보기 때문에. x,y 를 아래와 같이 shift 
+#         # roatate 할 때, 중심좌표 center 로 잡고, angle radian 변환해서 넣어주기 
+
+#         path_obj = patches.Rectangle((x-width*0.5,y-height*0.5), width, height, linewidth=0.1, edgecolor="red", fill=False,
+#                                     rotation_point="center",
+#                                     angle=angle_*180/np.pi)
+        
+#         ax.add_patch(path_obj)
+
+
+#     plt.savefig(f"/mnt/hdd/eric/.tmp_ipy/00.Reproduction_Test/[Ship]_AIS_Matching_Result/exp_1130_thr_{thr}_dpi_1200.png",dpi =1200 )
+#     #plt.imsave(out_png_path, img_temp)
+#     #plt.show()

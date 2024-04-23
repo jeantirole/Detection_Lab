@@ -324,9 +324,9 @@ class TwoStageDetector(nn.Module):
             pos_proposals_list.append(proposals_sep)
         
         cls_loss = self.classifier(feature_map, pos_proposals_list, GT_class_pos)
-        total_loss = cls_loss + total_rpn_loss
+        #total_loss = cls_loss + total_rpn_loss
         
-        return total_loss
+        return cls_loss, total_rpn_loss
     
     def inference(self, images, conf_thresh=0.5, nms_thresh=0.7):
         batch_size = images.size(dim=0)
