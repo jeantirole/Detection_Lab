@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 #from tensorflow.keras.utils import to_categorical
 import cv2
 import numpy as np 
+import math
 
 import sys
 import os 
@@ -1011,59 +1012,69 @@ def read_txt(file_path):
     return lines
 
 
+#----------------------------------------------    
+# Box Converter 
 
-
-
-
-
-
-
-
-
-
-# # Box Matching 
-# Image.MAX_IMAGE_PIXELS = 933120000
-# thr =0.55 
-
-# for i in range(0,5):
-#     thr += 0.05
-#     print(thr)
-
+def box_converter(pred_box, input_type, output_type):
     
-#     img_path = args.img_path
-#     img_ = Image.open(img_path)
-#     plt.figure(figsize=(18,18))
-#     plt.imshow(img_)
-
-#     ax = plt.gca()
-
-
-#     bboxes_ = [] 
-#     cnt = 0
-#     for r in result[0]:
-#         if r[-1] > thr:
-#             cnt+=1
-#             bboxes_.append(r)
-#     #result[0][-1][-1]
-
-
-#     for box_ in bboxes_:
-#         x = box_[0]
-#         y = box_[1]
-#         width = box_[2]
-#         height = box_[3]
-#         angle_ = box_[4]
-
-#         # model 의 객체좌표가 center 중심인데, patches.Rectangle 은 좌하단을 기준점으로 보기 때문에. x,y 를 아래와 같이 shift 
-#         # roatate 할 때, 중심좌표 center 로 잡고, angle radian 변환해서 넣어주기 
-
-#         path_obj = patches.Rectangle((x-width*0.5,y-height*0.5), width, height, linewidth=0.1, edgecolor="red", fill=False,
-#                                     rotation_point="center",
-#                                     angle=angle_*180/np.pi)
+    pred_box = pred_box.detach().cpu()
+    pred_box = np.array(pred_box)
+    
+    if (input_type == "4_coord_center") & (output_type == "4_coord_minmax"):
         
-#         ax.add_patch(path_obj)
+        
+        x_center, y_center = pred_box[0],pred_box[1]
+        width, height = pred_box[2],pred_box[3]
+        angle = pred_box[4]
+
+        x_min = x_center - width/2
+        y_min = y_center - height/2
+
+        x_max = x_center + width/2
+        y_max = y_center + height/2
+            
+        box = [x_min,y_min,x_max,y_max,angle]
+        
+    
+    def four_to_eight(box):
+        x_min = box[0]
+        y_min = box[1]
+        x_max = box[2]
+        y_max = box[3]
+        
+        box = [x_min, y_min, x_min,y_max, x_max, y_min, x_max, y_max]       
+        return box 
+    
+    #box = four_to_eight(box)
+    
+    return box
+         
+def box_rotate(origin, point, angle):
+    """
+    Rotate a point counterclockwise by a given angle around a given origin.
+    The angle should be given in radians.
+    
+    modified from answer here: https://stackoverflow.com/questions/34372480/rotate-point-about-another-point-in-degrees-python
+    """
+    ox, oy = origin
+    px, py = point
+
+    qx = ox + math.cos(angle) * (px - ox) - math.sin(angle) * (py - oy)
+    qy = oy + math.sin(angle) * (px - ox) + math.cos(angle) * (py - oy)
+    return int(qx), int(qy)
 
 
-#     plt.savefig(f"/mnt/hdd/eric/.tmp_ipy/00.Reproduction_Test/[Ship]_AIS_Matching_Result/exp_1130_thr_{thr}_dpi_1200.png",dpi =1200 )
-#     #plt.imsave(out_png_path, img_temp)
-#     #plt.show()
+def rotated_to_rectangle(rotated_boxes):
+
+    rectangle_boxes = []
+    for box in rotated_boxes:
+        x_min = min([i[0] for i in box])
+        y_min = min([i[1] for i in box])
+        
+        x_max = max([i[0] for i in box])
+        y_max = max([i[1] for i in box])
+        
+        poly_box = [[x_min,y_min],[x_min,y_max],[x_max,y_max],[x_max,y_min]]
+        rectangle_boxes.append(poly_box)   
+    
+    return rectangle_boxes
