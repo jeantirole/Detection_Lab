@@ -1078,3 +1078,24 @@ def rotated_to_rectangle(rotated_boxes):
         rectangle_boxes.append(poly_box)   
     
     return rectangle_boxes
+
+# --- affine-transform and poly
+
+# 0 convertinf to poly type
+def convert_to_polygon(box):
+    x, y, width, height = box[0:4]
+
+    # Calculate the coordinates of the four corners
+    x1, y1 = x-0.5*width, y-0.5*height
+    x2, y2 = x-0.5*width, y+0.5*height
+    x3, y3 = x+0.5*width, y+0.5*height
+    x4, y4 = x+0.5*width, y-0.5*height
+
+    # Create a list of points representing the polygon
+    polygon = [(x1, y1), (x2, y2), (x3, y3), (x4, y4)]
+
+    return polygon
+
+poly_gt = convert_to_polygon(gt_box)
+poly_gt = np.array(poly_gt)
+
