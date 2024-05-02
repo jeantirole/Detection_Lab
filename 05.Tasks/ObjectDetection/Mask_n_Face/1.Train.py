@@ -25,8 +25,8 @@ from PIL import Image
 import xml.etree.ElementTree as ET
 import collections
 #---
-from lightning.fabric import Fabric
-import lightning as L
+#from lightning.fabric import Fabric
+#import lightning as L
 
 import torch
 
