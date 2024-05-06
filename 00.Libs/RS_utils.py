@@ -1096,6 +1096,4 @@ def convert_to_polygon(box):
 
     return polygon
 
-poly_gt = convert_to_polygon(gt_box)
-poly_gt = np.array(poly_gt)
 
