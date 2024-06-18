@@ -1,0 +1,100 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO: You are using a CUDA device ('NVIDIA GeForce RTX 3090') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+INFO:lightning.pytorch.utilities.rank_zero:You are using a CUDA device ('NVIDIA GeForce RTX 3090') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+INFO: Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+INFO:lightning.fabric.utilities.distributed:Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+INFO: ----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+INFO:lightning.pytorch.utilities.rank_zero:----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+INFO:timm.models._builder:Loading pretrained weights from Hugging Face hub (timm/convnext_xxlarge.clip_laion2b_soup_ft_in1k)
+INFO:timm.models._hub:[timm/convnext_xxlarge.clip_laion2b_soup_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+INFO:RS_utils:{'input_size': (3, 256, 256), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'center'}
+INFO:RS_utils:Compose(
+    Resize(size=256, interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(256, 256))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)
+fabric
+/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [3072, 1, 7, 7], strides() = [49, 1, 7, 1]
+bucket_view.sizes() = [3072, 1, 7, 7], strides() = [49, 49, 7, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+INFO:RS_utils:{'epoch': 0, 'iteration': 0, 'progress': 0.0, 'loss': 2.3886, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 3.5485, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 2.13, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 2.1986, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 2.5015, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 2.2629, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 26.294, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 23.464, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 24.308, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 1.7921, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 4.3944, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 2.456, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 2.6847, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 2.9575, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 3.0583, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 2.1524, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 2.1468, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 2.6776, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 2.0274, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 1.894, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 2.4193, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 2.0783, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 1.4598, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 2.5434, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 1.9953, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 2.491, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 2.0048, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 2.0308, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 1.8356, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 1.766, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 1.806, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 1.9279, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 1.8645, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 2.1802, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 1.8554, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 2.269, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 2.4669, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 1.9456, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 1.8957, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 39, 'progress': 0.5652173913043478, 'loss': 2.1185, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 40, 'progress': 0.5797101449275363, 'loss': 2.5066, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 41, 'progress': 0.5942028985507246, 'loss': 2.5266, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 42, 'progress': 0.6086956521739131, 'loss': 2.4436, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 43, 'progress': 0.6231884057971014, 'loss': 2.004, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 44, 'progress': 0.6376811594202898, 'loss': 2.4725, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 45, 'progress': 0.6521739130434783, 'loss': 1.8987, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 46, 'progress': 0.6666666666666666, 'loss': 1.8697, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 47, 'progress': 0.6811594202898551, 'loss': 1.7541, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 48, 'progress': 0.6956521739130435, 'loss': 2.1234, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 49, 'progress': 0.7101449275362319, 'loss': 1.9918, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 50, 'progress': 0.7246376811594203, 'loss': 2.3378, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 51, 'progress': 0.7391304347826086, 'loss': 1.7973, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 52, 'progress': 0.7536231884057971, 'loss': 1.8667, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 53, 'progress': 0.7681159420289855, 'loss': 1.9461, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 54, 'progress': 0.782608695652174, 'loss': 2.2405, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 55, 'progress': 0.7971014492753623, 'loss': 1.6266, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 56, 'progress': 0.8115942028985508, 'loss': 2.1846, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 57, 'progress': 0.8260869565217391, 'loss': 2.1202, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 58, 'progress': 0.8405797101449275, 'loss': 1.6795, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 59, 'progress': 0.855072463768116, 'loss': 1.7044, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 60, 'progress': 0.8695652173913043, 'loss': 2.0373, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 61, 'progress': 0.8840579710144928, 'loss': 2.1016, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 62, 'progress': 0.8985507246376812, 'loss': 2.0695, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 63, 'progress': 0.9130434782608695, 'loss': 1.4991, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 64, 'progress': 0.927536231884058, 'loss': 2.2372, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 65, 'progress': 0.9420289855072463, 'loss': 1.858, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 66, 'progress': 0.9565217391304348, 'loss': 1.5062, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 67, 'progress': 0.9710144927536232, 'loss': 1.766, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 68, 'progress': 0.9855072463768116, 'loss': 2.2267, 'batch_size': 4, 'lr': 0.00025}
+Traceback (most recent call last):
+  File "01.finetune.py", line 139, in <module>
+    torch.save(model.state_dict(), cfg.SAVE_DIR / f"{cfg.MODEL}_epoch_{epoch}.pth")
+TypeError: unsupported operand type(s) for /: 'str' and 'str'

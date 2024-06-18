@@ -1,0 +1,91 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO: You are using a CUDA device ('NVIDIA GeForce RTX 3090') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+INFO:lightning.pytorch.utilities.rank_zero:You are using a CUDA device ('NVIDIA GeForce RTX 3090') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+INFO: Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+INFO:lightning.fabric.utilities.distributed:Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+INFO: ----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+INFO:lightning.pytorch.utilities.rank_zero:----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+INFO:timm.models._builder:Loading pretrained weights from Hugging Face hub (timm/maxvit_xlarge_tf_512.in21k_ft_in1k)
+INFO:timm.models._hub:[timm/maxvit_xlarge_tf_512.in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+INFO:RS_utils:{'input_size': (3, 512, 512), 'interpolation': 'bicubic', 'mean': (0.5, 0.5, 0.5), 'std': (0.5, 0.5, 0.5), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+INFO:RS_utils:Compose(
+    Resize(size=(512, 512), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(512, 512))
+    ToTensor()
+    Normalize(mean=tensor([0.5000, 0.5000, 0.5000]), std=tensor([0.5000, 0.5000, 0.5000]))
+)
+fabric
+Traceback (most recent call last):
+  File "01.finetune.py", line 119, in <module>
+    pred = model(X)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/lightning/fabric/wrappers.py", line 141, in forward
+    output = self._forward_module(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1519, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1355, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/maxxvit.py", line 1264, in forward
+    x = self.forward_features(x)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/maxxvit.py", line 1256, in forward_features
+    x = self.stages(x)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/maxxvit.py", line 1064, in forward
+    x = self.blocks(x)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/maxxvit.py", line 955, in forward
+    x = self.attn_grid(x)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/maxxvit.py", line 738, in forward
+    x = x + self.drop_path1(self.ls1(self._partition_attn(self.norm1(x))))
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/maxxvit.py", line 729, in _partition_attn
+    partitioned = self.attn(partitioned)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/maxxvit.py", line 255, in forward
+    attn_bias = self.rel_pos.get_bias()
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/layers/pos_embed_rel.py", line 282, in get_bias
+    return reindex_2d_einsum_lookup(
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/layers/pos_embed_rel.py", line 254, in reindex_2d_einsum_lookup
+    return reindexed_tensor.reshape(relative_position_tensor.shape[0], area, area)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 23.69 GiB of which 17.12 MiB is free. Including non-PyTorch memory, this process has 23.67 GiB memory in use. Of the allocated memory 23.10 GiB is allocated by PyTorch, and 91.47 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

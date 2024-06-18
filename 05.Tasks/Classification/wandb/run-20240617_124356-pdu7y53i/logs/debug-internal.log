@@ -1,0 +1,83 @@
+2024-06-17 12:43:56,315 INFO    StreamThr :623036 [internal.py:wandb_internal():86] W&B internal server running at pid: 623036, started at: 2024-06-17 12:43:56.314226
+2024-06-17 12:43:56,318 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status
+2024-06-17 12:43:56,323 INFO    WriterThread:623036 [datastore.py:open_for_write():87] open: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/05.Tasks/Classification/wandb/run-20240617_124356-pdu7y53i/run-pdu7y53i.wandb
+2024-06-17 12:43:56,324 DEBUG   SenderThread:623036 [sender.py:send():379] send: header
+2024-06-17 12:43:56,478 DEBUG   SenderThread:623036 [sender.py:send():379] send: run
+2024-06-17 12:43:57,001 INFO    SenderThread:623036 [dir_watcher.py:__init__():211] watching files in: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/05.Tasks/Classification/wandb/run-20240617_124356-pdu7y53i/files
+2024-06-17 12:43:57,001 INFO    SenderThread:623036 [sender.py:_start_run_threads():1124] run started: pdu7y53i with start time 1718595836.313357
+2024-06-17 12:43:57,009 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: check_version
+2024-06-17 12:43:57,010 DEBUG   SenderThread:623036 [sender.py:send_request():406] send_request: check_version
+2024-06-17 12:43:57,122 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: run_start
+2024-06-17 12:43:57,130 DEBUG   HandlerThread:623036 [system_info.py:__init__():26] System info init
+2024-06-17 12:43:57,130 DEBUG   HandlerThread:623036 [system_info.py:__init__():41] System info init done
+2024-06-17 12:43:57,130 INFO    HandlerThread:623036 [system_monitor.py:start():194] Starting system monitor
+2024-06-17 12:43:57,130 INFO    SystemMonitor:623036 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-17 12:43:57,131 INFO    HandlerThread:623036 [system_monitor.py:probe():214] Collecting system info
+2024-06-17 12:43:57,132 INFO    SystemMonitor:623036 [interfaces.py:start():190] Started cpu monitoring
+2024-06-17 12:43:57,133 INFO    SystemMonitor:623036 [interfaces.py:start():190] Started disk monitoring
+2024-06-17 12:43:57,134 INFO    SystemMonitor:623036 [interfaces.py:start():190] Started gpu monitoring
+2024-06-17 12:43:57,137 INFO    SystemMonitor:623036 [interfaces.py:start():190] Started memory monitoring
+2024-06-17 12:43:57,138 INFO    SystemMonitor:623036 [interfaces.py:start():190] Started network monitoring
+2024-06-17 12:43:57,203 DEBUG   HandlerThread:623036 [system_info.py:probe():150] Probing system
+2024-06-17 12:43:57,211 DEBUG   HandlerThread:623036 [system_info.py:_probe_git():135] Probing git
+2024-06-17 12:43:57,228 DEBUG   HandlerThread:623036 [system_info.py:_probe_git():143] Probing git done
+2024-06-17 12:43:57,228 DEBUG   HandlerThread:623036 [system_info.py:probe():198] Probing system done
+2024-06-17 12:43:57,228 DEBUG   HandlerThread:623036 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-105-generic-x86_64-with-glibc2.17', 'python': '3.8.18', 'heartbeatAt': '2024-06-17T03:43:57.203962', 'startedAt': '2024-06-17T03:43:56.301444', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '<python with no main file>', 'codePathLocal': None, 'git': {'remote': 'https://github.com/jeantirole/Lab_Detection', 'commit': '60d60d506aaaff20100f69303cfd10fa9438a2d1'}, 'email': 'jeantirole01@gmail.com', 'root': '/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection', 'host': 'telepix', 'username': 'eric', 'executable': '/mnt/hdd/eric/.conda/envs/mapv2/bin/python', 'cpu_count': 36, 'cpu_count_logical': 72, 'cpu_freq': {'current': 2604.4101805555556, 'min': 1000.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 1528.274, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 3900.001, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}], 'disk': {'/': {'total': 915.3232879638672, 'used': 686.8994941711426}}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25447170048}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25444548608}], 'memory': {'total': 251.49694061279297}}
+2024-06-17 12:43:57,228 INFO    HandlerThread:623036 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-17 12:43:57,228 INFO    HandlerThread:623036 [system_monitor.py:probe():227] Publishing system info
+2024-06-17 12:43:57,228 DEBUG   HandlerThread:623036 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-17 12:43:58,006 INFO    Thread-12 :623036 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/05.Tasks/Classification/wandb/run-20240617_124356-pdu7y53i/files/conda-environment.yaml
+2024-06-17 12:44:06,476 DEBUG   HandlerThread:623036 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-17 12:44:06,478 INFO    HandlerThread:623036 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-17 12:44:06,486 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:06,486 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-17 12:44:06,487 DEBUG   SenderThread:623036 [sender.py:send():379] send: files
+2024-06-17 12:44:06,487 INFO    SenderThread:623036 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-06-17 12:44:06,665 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: python_packages
+2024-06-17 12:44:06,666 DEBUG   SenderThread:623036 [sender.py:send_request():406] send_request: python_packages
+2024-06-17 12:44:06,667 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-17 12:44:06,668 DEBUG   SenderThread:623036 [sender.py:send_request():406] send_request: stop_status
+2024-06-17 12:44:06,673 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-17 12:44:06,918 DEBUG   SenderThread:623036 [sender.py:send():379] send: telemetry
+2024-06-17 12:44:06,919 DEBUG   SenderThread:623036 [sender.py:send():379] send: config
+2024-06-17 12:44:06,921 DEBUG   SenderThread:623036 [sender.py:send():379] send: metric
+2024-06-17 12:44:06,922 DEBUG   SenderThread:623036 [sender.py:send():379] send: telemetry
+2024-06-17 12:44:06,922 DEBUG   SenderThread:623036 [sender.py:send():379] send: metric
+2024-06-17 12:44:06,922 WARNING SenderThread:623036 [sender.py:send_metric():1341] Seen metric with glob (shouldn't happen)
+2024-06-17 12:44:06,922 DEBUG   SenderThread:623036 [sender.py:send():379] send: telemetry
+2024-06-17 12:44:07,006 INFO    Thread-12 :623036 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/05.Tasks/Classification/wandb/run-20240617_124356-pdu7y53i/files/conda-environment.yaml
+2024-06-17 12:44:07,006 INFO    Thread-12 :623036 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/05.Tasks/Classification/wandb/run-20240617_124356-pdu7y53i/files/wandb-metadata.json
+2024-06-17 12:44:07,007 INFO    Thread-12 :623036 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/05.Tasks/Classification/wandb/run-20240617_124356-pdu7y53i/files/requirements.txt
+2024-06-17 12:44:07,401 INFO    wandb-upload_0:623036 [upload_job.py:push():131] Uploaded file /tmp/tmp5ibkmek6wandb/8h1b0mp7-wandb-metadata.json
+2024-06-17 12:44:07,923 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:08,185 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: pause
+2024-06-17 12:44:08,185 INFO    HandlerThread:623036 [handler.py:handle_request_pause():708] stopping system metrics thread
+2024-06-17 12:44:08,185 INFO    HandlerThread:623036 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-17 12:44:08,185 DEBUG   SystemMonitor:623036 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-17 12:44:08,186 INFO    HandlerThread:623036 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-17 12:44:08,187 DEBUG   SystemMonitor:623036 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-17 12:44:08,187 INFO    HandlerThread:623036 [interfaces.py:finish():202] Joined disk monitor
+2024-06-17 12:44:08,188 DEBUG   SystemMonitor:623036 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-17 12:44:08,466 INFO    HandlerThread:623036 [interfaces.py:finish():202] Joined gpu monitor
+2024-06-17 12:44:08,466 INFO    HandlerThread:623036 [interfaces.py:finish():202] Joined memory monitor
+2024-06-17 12:44:08,467 INFO    HandlerThread:623036 [interfaces.py:finish():202] Joined network monitor
+2024-06-17 12:44:08,468 DEBUG   SenderThread:623036 [sender.py:send():379] send: stats
+2024-06-17 12:44:13,470 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:18,471 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:21,666 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-17 12:44:21,667 DEBUG   SenderThread:623036 [sender.py:send_request():406] send_request: stop_status
+2024-06-17 12:44:21,667 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-17 12:44:23,914 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:28,921 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:30,016 INFO    Thread-12 :623036 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/05.Tasks/Classification/wandb/run-20240617_124356-pdu7y53i/files/config.yaml
+2024-06-17 12:44:34,215 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:36,666 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-17 12:44:36,667 DEBUG   SenderThread:623036 [sender.py:send_request():406] send_request: stop_status
+2024-06-17 12:44:36,707 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-17 12:44:39,922 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:44,924 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:49,925 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report
+2024-06-17 12:44:51,666 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-17 12:44:51,667 DEBUG   SenderThread:623036 [sender.py:send_request():406] send_request: stop_status
+2024-06-17 12:44:51,707 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-17 12:44:54,969 DEBUG   HandlerThread:623036 [handler.py:handle_request():146] handle_request: status_report

@@ -1,0 +1,84 @@
+
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO:timm.models._builder:Loading pretrained weights from Hugging Face hub (timm/maxvit_xlarge_tf_512.in21k_ft_in1k)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+model.safetensors: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.90G/1.90G [02:15<00:00, 14.1MB/s]
+INFO:timm.models._hub:[timm/maxvit_xlarge_tf_512.in21k_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+INFO:RS_utils:{'input_size': (3, 512, 512), 'interpolation': 'bicubic', 'mean': (0.5, 0.5, 0.5), 'std': (0.5, 0.5, 0.5), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+INFO:RS_utils:Compose(
+    Resize(size=(512, 512), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(512, 512))
+    ToTensor()
+    Normalize(mean=tensor([0.5000, 0.5000, 0.5000]), std=tensor([0.5000, 0.5000, 0.5000]))
+)
+fabric
+Traceback (most recent call last):
+  File "01.finetune.py", line 123, in <module>
+    fabric.backward(scaler.scale(loss))
+NameError: name 'fabric' is not defined

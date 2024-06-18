@@ -1,0 +1,851 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.18
+    cli_version: 0.16.6
+    framework: huggingface
+    huggingface_version: 4.41.1
+    is_jupyter_run: true
+    is_kaggle_kernel: true
+    start_time: 1718595836.0
+    t:
+      1:
+      - 1
+      - 5
+      - 11
+      - 41
+      - 49
+      - 51
+      - 53
+      - 55
+      - 71
+      2:
+      - 1
+      - 5
+      - 11
+      - 41
+      - 49
+      - 51
+      - 53
+      - 55
+      - 71
+      3:
+      - 7
+      - 13
+      - 23
+      4: 3.8.18
+      5: 0.16.6
+      6: 4.41.1
+      8:
+      - 1
+      - 2
+      - 5
+      9:
+        1: transformers_trainer
+      13: linux-x86_64
+    m:
+    - 1: train/global_step
+      6:
+      - 3
+return_dict:
+  desc: null
+  value: true
+output_hidden_states:
+  desc: null
+  value: false
+output_attentions:
+  desc: null
+  value: false
+torchscript:
+  desc: null
+  value: false
+torch_dtype:
+  desc: null
+  value: null
+use_bfloat16:
+  desc: null
+  value: false
+tf_legacy_loss:
+  desc: null
+  value: false
+pruned_heads:
+  desc: null
+  value: {}
+tie_word_embeddings:
+  desc: null
+  value: true
+chunk_size_feed_forward:
+  desc: null
+  value: 0
+is_encoder_decoder:
+  desc: null
+  value: false
+is_decoder:
+  desc: null
+  value: false
+cross_attention_hidden_size:
+  desc: null
+  value: null
+add_cross_attention:
+  desc: null
+  value: false
+tie_encoder_decoder:
+  desc: null
+  value: false
+max_length:
+  desc: null
+  value: 20
+min_length:
+  desc: null
+  value: 0
+do_sample:
+  desc: null
+  value: false
+early_stopping:
+  desc: null
+  value: false
+num_beams:
+  desc: null
+  value: 1
+num_beam_groups:
+  desc: null
+  value: 1
+diversity_penalty:
+  desc: null
+  value: 0.0
+temperature:
+  desc: null
+  value: 1.0
+top_k:
+  desc: null
+  value: 50
+top_p:
+  desc: null
+  value: 1.0
+typical_p:
+  desc: null
+  value: 1.0
+repetition_penalty:
+  desc: null
+  value: 1.0
+length_penalty:
+  desc: null
+  value: 1.0
+no_repeat_ngram_size:
+  desc: null
+  value: 0
+encoder_no_repeat_ngram_size:
+  desc: null
+  value: 0
+bad_words_ids:
+  desc: null
+  value: null
+num_return_sequences:
+  desc: null
+  value: 1
+output_scores:
+  desc: null
+  value: false
+return_dict_in_generate:
+  desc: null
+  value: false
+forced_bos_token_id:
+  desc: null
+  value: null
+forced_eos_token_id:
+  desc: null
+  value: null
+remove_invalid_values:
+  desc: null
+  value: false
+exponential_decay_length_penalty:
+  desc: null
+  value: null
+suppress_tokens:
+  desc: null
+  value: null
+begin_suppress_tokens:
+  desc: null
+  value: null
+architectures:
+  desc: null
+  value:
+  - ViTModel
+finetuning_task:
+  desc: null
+  value: null
+id2label:
+  desc: null
+  value:
+    '0': apple_pie
+    '1': baby_back_ribs
+    '2': baklava
+    '3': beef_carpaccio
+    '4': beef_tartare
+    '5': beet_salad
+    '6': beignets
+    '7': bibimbap
+    '8': bread_pudding
+    '9': breakfast_burrito
+    '10': bruschetta
+    '11': caesar_salad
+    '12': cannoli
+    '13': caprese_salad
+    '14': carrot_cake
+    '15': ceviche
+    '16': cheesecake
+    '17': cheese_plate
+    '18': chicken_curry
+    '19': chicken_quesadilla
+    '20': chicken_wings
+    '21': chocolate_cake
+    '22': chocolate_mousse
+    '23': churros
+    '24': clam_chowder
+    '25': club_sandwich
+    '26': crab_cakes
+    '27': creme_brulee
+    '28': croque_madame
+    '29': cup_cakes
+    '30': deviled_eggs
+    '31': donuts
+    '32': dumplings
+    '33': edamame
+    '34': eggs_benedict
+    '35': escargots
+    '36': falafel
+    '37': filet_mignon
+    '38': fish_and_chips
+    '39': foie_gras
+    '40': french_fries
+    '41': french_onion_soup
+    '42': french_toast
+    '43': fried_calamari
+    '44': fried_rice
+    '45': frozen_yogurt
+    '46': garlic_bread
+    '47': gnocchi
+    '48': greek_salad
+    '49': grilled_cheese_sandwich
+    '50': grilled_salmon
+    '51': guacamole
+    '52': gyoza
+    '53': hamburger
+    '54': hot_and_sour_soup
+    '55': hot_dog
+    '56': huevos_rancheros
+    '57': hummus
+    '58': ice_cream
+    '59': lasagna
+    '60': lobster_bisque
+    '61': lobster_roll_sandwich
+    '62': macaroni_and_cheese
+    '63': macarons
+    '64': miso_soup
+    '65': mussels
+    '66': nachos
+    '67': omelette
+    '68': onion_rings
+    '69': oysters
+    '70': pad_thai
+    '71': paella
+    '72': pancakes
+    '73': panna_cotta
+    '74': peking_duck
+    '75': pho
+    '76': pizza
+    '77': pork_chop
+    '78': poutine
+    '79': prime_rib
+    '80': pulled_pork_sandwich
+    '81': ramen
+    '82': ravioli
+    '83': red_velvet_cake
+    '84': risotto
+    '85': samosa
+    '86': sashimi
+    '87': scallops
+    '88': seaweed_salad
+    '89': shrimp_and_grits
+    '90': spaghetti_bolognese
+    '91': spaghetti_carbonara
+    '92': spring_rolls
+    '93': steak
+    '94': strawberry_shortcake
+    '95': sushi
+    '96': tacos
+    '97': takoyaki
+    '98': tiramisu
+    '99': tuna_tartare
+    '100': waffles
+label2id:
+  desc: null
+  value:
+    apple_pie: '0'
+    baby_back_ribs: '1'
+    baklava: '2'
+    beef_carpaccio: '3'
+    beef_tartare: '4'
+    beet_salad: '5'
+    beignets: '6'
+    bibimbap: '7'
+    bread_pudding: '8'
+    breakfast_burrito: '9'
+    bruschetta: '10'
+    caesar_salad: '11'
+    cannoli: '12'
+    caprese_salad: '13'
+    carrot_cake: '14'
+    ceviche: '15'
+    cheesecake: '16'
+    cheese_plate: '17'
+    chicken_curry: '18'
+    chicken_quesadilla: '19'
+    chicken_wings: '20'
+    chocolate_cake: '21'
+    chocolate_mousse: '22'
+    churros: '23'
+    clam_chowder: '24'
+    club_sandwich: '25'
+    crab_cakes: '26'
+    creme_brulee: '27'
+    croque_madame: '28'
+    cup_cakes: '29'
+    deviled_eggs: '30'
+    donuts: '31'
+    dumplings: '32'
+    edamame: '33'
+    eggs_benedict: '34'
+    escargots: '35'
+    falafel: '36'
+    filet_mignon: '37'
+    fish_and_chips: '38'
+    foie_gras: '39'
+    french_fries: '40'
+    french_onion_soup: '41'
+    french_toast: '42'
+    fried_calamari: '43'
+    fried_rice: '44'
+    frozen_yogurt: '45'
+    garlic_bread: '46'
+    gnocchi: '47'
+    greek_salad: '48'
+    grilled_cheese_sandwich: '49'
+    grilled_salmon: '50'
+    guacamole: '51'
+    gyoza: '52'
+    hamburger: '53'
+    hot_and_sour_soup: '54'
+    hot_dog: '55'
+    huevos_rancheros: '56'
+    hummus: '57'
+    ice_cream: '58'
+    lasagna: '59'
+    lobster_bisque: '60'
+    lobster_roll_sandwich: '61'
+    macaroni_and_cheese: '62'
+    macarons: '63'
+    miso_soup: '64'
+    mussels: '65'
+    nachos: '66'
+    omelette: '67'
+    onion_rings: '68'
+    oysters: '69'
+    pad_thai: '70'
+    paella: '71'
+    pancakes: '72'
+    panna_cotta: '73'
+    peking_duck: '74'
+    pho: '75'
+    pizza: '76'
+    pork_chop: '77'
+    poutine: '78'
+    prime_rib: '79'
+    pulled_pork_sandwich: '80'
+    ramen: '81'
+    ravioli: '82'
+    red_velvet_cake: '83'
+    risotto: '84'
+    samosa: '85'
+    sashimi: '86'
+    scallops: '87'
+    seaweed_salad: '88'
+    shrimp_and_grits: '89'
+    spaghetti_bolognese: '90'
+    spaghetti_carbonara: '91'
+    spring_rolls: '92'
+    steak: '93'
+    strawberry_shortcake: '94'
+    sushi: '95'
+    tacos: '96'
+    takoyaki: '97'
+    tiramisu: '98'
+    tuna_tartare: '99'
+    waffles: '100'
+tokenizer_class:
+  desc: null
+  value: null
+prefix:
+  desc: null
+  value: null
+bos_token_id:
+  desc: null
+  value: null
+pad_token_id:
+  desc: null
+  value: null
+eos_token_id:
+  desc: null
+  value: null
+sep_token_id:
+  desc: null
+  value: null
+decoder_start_token_id:
+  desc: null
+  value: null
+task_specific_params:
+  desc: null
+  value: null
+problem_type:
+  desc: null
+  value: null
+_name_or_path:
+  desc: null
+  value: google/vit-base-patch16-224-in21k
+transformers_version:
+  desc: null
+  value: 4.41.1
+model_type:
+  desc: null
+  value: vit
+hidden_size:
+  desc: null
+  value: 768
+num_hidden_layers:
+  desc: null
+  value: 12
+num_attention_heads:
+  desc: null
+  value: 12
+intermediate_size:
+  desc: null
+  value: 3072
+hidden_act:
+  desc: null
+  value: gelu
+hidden_dropout_prob:
+  desc: null
+  value: 0.0
+attention_probs_dropout_prob:
+  desc: null
+  value: 0.0
+initializer_range:
+  desc: null
+  value: 0.02
+layer_norm_eps:
+  desc: null
+  value: 1.0e-12
+image_size:
+  desc: null
+  value: 224
+patch_size:
+  desc: null
+  value: 16
+num_channels:
+  desc: null
+  value: 3
+qkv_bias:
+  desc: null
+  value: true
+encoder_stride:
+  desc: null
+  value: 16
+output_dir:
+  desc: null
+  value: ./results
+overwrite_output_dir:
+  desc: null
+  value: false
+do_train:
+  desc: null
+  value: false
+do_eval:
+  desc: null
+  value: true
+do_predict:
+  desc: null
+  value: false
+eval_strategy:
+  desc: null
+  value: steps
+prediction_loss_only:
+  desc: null
+  value: false
+per_device_train_batch_size:
+  desc: null
+  value: 16
+per_device_eval_batch_size:
+  desc: null
+  value: 8
+per_gpu_train_batch_size:
+  desc: null
+  value: null
+per_gpu_eval_batch_size:
+  desc: null
+  value: null
+gradient_accumulation_steps:
+  desc: null
+  value: 1
+eval_accumulation_steps:
+  desc: null
+  value: null
+eval_delay:
+  desc: null
+  value: 0
+learning_rate:
+  desc: null
+  value: 0.0002
+weight_decay:
+  desc: null
+  value: 0.0
+adam_beta1:
+  desc: null
+  value: 0.9
+adam_beta2:
+  desc: null
+  value: 0.999
+adam_epsilon:
+  desc: null
+  value: 1.0e-08
+max_grad_norm:
+  desc: null
+  value: 1.0
+num_train_epochs:
+  desc: null
+  value: 4
+max_steps:
+  desc: null
+  value: -1
+lr_scheduler_type:
+  desc: null
+  value: linear
+lr_scheduler_kwargs:
+  desc: null
+  value: {}
+warmup_ratio:
+  desc: null
+  value: 0.0
+warmup_steps:
+  desc: null
+  value: 0
+log_level:
+  desc: null
+  value: passive
+log_level_replica:
+  desc: null
+  value: warning
+log_on_each_node:
+  desc: null
+  value: true
+logging_dir:
+  desc: null
+  value: ./results/runs/Jun17_12-42-09_telepix
+logging_strategy:
+  desc: null
+  value: steps
+logging_first_step:
+  desc: null
+  value: false
+logging_steps:
+  desc: null
+  value: 10
+logging_nan_inf_filter:
+  desc: null
+  value: true
+save_strategy:
+  desc: null
+  value: steps
+save_steps:
+  desc: null
+  value: 100
+save_total_limit:
+  desc: null
+  value: 2
+save_safetensors:
+  desc: null
+  value: true
+save_on_each_node:
+  desc: null
+  value: false
+save_only_model:
+  desc: null
+  value: false
+restore_callback_states_from_checkpoint:
+  desc: null
+  value: false
+no_cuda:
+  desc: null
+  value: false
+use_cpu:
+  desc: null
+  value: false
+use_mps_device:
+  desc: null
+  value: false
+seed:
+  desc: null
+  value: 42
+data_seed:
+  desc: null
+  value: null
+jit_mode_eval:
+  desc: null
+  value: false
+use_ipex:
+  desc: null
+  value: false
+bf16:
+  desc: null
+  value: false
+fp16:
+  desc: null
+  value: true
+fp16_opt_level:
+  desc: null
+  value: O1
+half_precision_backend:
+  desc: null
+  value: auto
+bf16_full_eval:
+  desc: null
+  value: false
+fp16_full_eval:
+  desc: null
+  value: false
+tf32:
+  desc: null
+  value: null
+local_rank:
+  desc: null
+  value: 0
+ddp_backend:
+  desc: null
+  value: null
+tpu_num_cores:
+  desc: null
+  value: null
+tpu_metrics_debug:
+  desc: null
+  value: false
+debug:
+  desc: null
+  value: []
+dataloader_drop_last:
+  desc: null
+  value: false
+eval_steps:
+  desc: null
+  value: 100
+dataloader_num_workers:
+  desc: null
+  value: 0
+dataloader_prefetch_factor:
+  desc: null
+  value: null
+past_index:
+  desc: null
+  value: -1
+run_name:
+  desc: null
+  value: ./results
+disable_tqdm:
+  desc: null
+  value: false
+remove_unused_columns:
+  desc: null
+  value: false
+label_names:
+  desc: null
+  value: null
+load_best_model_at_end:
+  desc: null
+  value: false
+metric_for_best_model:
+  desc: null
+  value: null
+greater_is_better:
+  desc: null
+  value: null
+ignore_data_skip:
+  desc: null
+  value: false
+fsdp:
+  desc: null
+  value: []
+fsdp_min_num_params:
+  desc: null
+  value: 0
+fsdp_config:
+  desc: null
+  value:
+    min_num_params: 0
+    xla: false
+    xla_fsdp_v2: false
+    xla_fsdp_grad_ckpt: false
+fsdp_transformer_layer_cls_to_wrap:
+  desc: null
+  value: null
+accelerator_config:
+  desc: null
+  value:
+    split_batches: false
+    dispatch_batches: null
+    even_batches: true
+    use_seedable_sampler: true
+    non_blocking: false
+    gradient_accumulation_kwargs: null
+deepspeed:
+  desc: null
+  value: null
+label_smoothing_factor:
+  desc: null
+  value: 0.0
+optim:
+  desc: null
+  value: adamw_torch
+optim_args:
+  desc: null
+  value: null
+adafactor:
+  desc: null
+  value: false
+group_by_length:
+  desc: null
+  value: false
+length_column_name:
+  desc: null
+  value: length
+report_to:
+  desc: null
+  value:
+  - tensorboard
+  - wandb
+ddp_find_unused_parameters:
+  desc: null
+  value: null
+ddp_bucket_cap_mb:
+  desc: null
+  value: null
+ddp_broadcast_buffers:
+  desc: null
+  value: null
+dataloader_pin_memory:
+  desc: null
+  value: true
+dataloader_persistent_workers:
+  desc: null
+  value: false
+skip_memory_metrics:
+  desc: null
+  value: true
+use_legacy_prediction_loop:
+  desc: null
+  value: false
+push_to_hub:
+  desc: null
+  value: false
+resume_from_checkpoint:
+  desc: null
+  value: null
+hub_model_id:
+  desc: null
+  value: null
+hub_strategy:
+  desc: null
+  value: every_save
+hub_token:
+  desc: null
+  value: <HUB_TOKEN>
+hub_private_repo:
+  desc: null
+  value: false
+hub_always_push:
+  desc: null
+  value: false
+gradient_checkpointing:
+  desc: null
+  value: false
+gradient_checkpointing_kwargs:
+  desc: null
+  value: null
+include_inputs_for_metrics:
+  desc: null
+  value: false
+eval_do_concat_batches:
+  desc: null
+  value: true
+fp16_backend:
+  desc: null
+  value: auto
+evaluation_strategy:
+  desc: null
+  value: steps
+push_to_hub_model_id:
+  desc: null
+  value: null
+push_to_hub_organization:
+  desc: null
+  value: null
+push_to_hub_token:
+  desc: null
+  value: <PUSH_TO_HUB_TOKEN>
+mp_parameters:
+  desc: null
+  value: ''
+auto_find_batch_size:
+  desc: null
+  value: false
+full_determinism:
+  desc: null
+  value: false
+torchdynamo:
+  desc: null
+  value: null
+ray_scope:
+  desc: null
+  value: last
+ddp_timeout:
+  desc: null
+  value: 1800
+torch_compile:
+  desc: null
+  value: false
+torch_compile_backend:
+  desc: null
+  value: null
+torch_compile_mode:
+  desc: null
+  value: null
+dispatch_batches:
+  desc: null
+  value: null
+split_batches:
+  desc: null
+  value: null
+include_tokens_per_second:
+  desc: null
+  value: false
+include_num_input_tokens_seen:
+  desc: null
+  value: false
+neftune_noise_alpha:
+  desc: null
+  value: null
+optim_target_modules:
+  desc: null
+  value: null
+batch_eval_metrics:
+  desc: null
+  value: false

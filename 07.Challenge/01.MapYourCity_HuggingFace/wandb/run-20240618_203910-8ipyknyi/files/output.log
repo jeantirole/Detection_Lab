@@ -1,0 +1,49 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO: Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+INFO:lightning.fabric.utilities.distributed:Initializing distributed: GLOBAL_RANK: 1, MEMBER: 2/4
+INFO:timm.models._builder:Loading pretrained weights from Hugging Face hub (timm/eva_large_patch14_336.in22k_ft_in22k_in1k)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+model.safetensors: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.22G/1.22G [01:13<00:00, 16.6MB/s]
+INFO:timm.models._hub:[timm/eva_large_patch14_336.in22k_ft_in22k_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+INFO:RS_utils:{'input_size': (3, 336, 336), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+INFO:RS_utils:Compose(
+    Resize(size=(336, 336), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(336, 336))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)
+Traceback (most recent call last):
+  File "/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/011.finetune.py", line 93, in <module>
+    train_set = map_dataset.Map_Dataset_v1(names_train,train_path)
+TypeError: __init__() missing 1 required positional argument: 'train_path'

@@ -1,0 +1,621 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO: You are using a CUDA device ('NVIDIA GeForce RTX 3090') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+INFO:lightning.pytorch.utilities.rank_zero:You are using a CUDA device ('NVIDIA GeForce RTX 3090') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+INFO: Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+INFO:lightning.fabric.utilities.distributed:Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+INFO: ----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+INFO:lightning.pytorch.utilities.rank_zero:----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+INFO:timm.models._builder:Loading pretrained weights from Hugging Face hub (timm/convnext_xxlarge.clip_laion2b_soup_ft_in1k)
+INFO:timm.models._hub:[timm/convnext_xxlarge.clip_laion2b_soup_ft_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+INFO:RS_utils:{'input_size': (3, 256, 256), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'center'}
+INFO:RS_utils:Compose(
+    Resize(size=256, interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(256, 256))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)
+fabric
+/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/autograd/__init__.py:251: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [3072, 1, 7, 7], strides() = [49, 1, 7, 1]
+bucket_view.sizes() = [3072, 1, 7, 7], strides() = [49, 49, 7, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:320.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+INFO:RS_utils:{'epoch': 0, 'iteration': 0, 'progress': 0.0, 'loss': 2.928, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 2.6191, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 2.1575, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 2.4823, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 2.2773, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 1.5552, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 22.072, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 9.051, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 2.6734, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 2.0541, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 4.4849, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 3.9762, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 3.3971, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 1.9279, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 2.4712, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 1.7755, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 2.2199, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 2.2973, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 1.9343, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 2.1293, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 2.0622, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 1.7699, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 1.5551, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 2.9341, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 2.1044, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 2.2549, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 1.8146, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 1.9021, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 2.1416, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 1.8871, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 1.9954, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 2.1196, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 1.8956, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 2.3224, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 1.7652, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 2.2122, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 2.5304, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 2.2496, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 1.8012, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 39, 'progress': 0.5652173913043478, 'loss': 2.2762, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 40, 'progress': 0.5797101449275363, 'loss': 2.3005, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 41, 'progress': 0.5942028985507246, 'loss': 2.3832, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 42, 'progress': 0.6086956521739131, 'loss': 2.6202, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 43, 'progress': 0.6231884057971014, 'loss': 2.0061, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 44, 'progress': 0.6376811594202898, 'loss': 2.2481, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 45, 'progress': 0.6521739130434783, 'loss': 1.8818, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 46, 'progress': 0.6666666666666666, 'loss': 1.8529, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 47, 'progress': 0.6811594202898551, 'loss': 1.7722, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 48, 'progress': 0.6956521739130435, 'loss': 2.1408, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 49, 'progress': 0.7101449275362319, 'loss': 1.9699, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 50, 'progress': 0.7246376811594203, 'loss': 2.2837, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 51, 'progress': 0.7391304347826086, 'loss': 1.8424, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 52, 'progress': 0.7536231884057971, 'loss': 1.8529, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 53, 'progress': 0.7681159420289855, 'loss': 1.9589, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 54, 'progress': 0.782608695652174, 'loss': 2.2292, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 55, 'progress': 0.7971014492753623, 'loss': 1.606, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 56, 'progress': 0.8115942028985508, 'loss': 2.1216, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 57, 'progress': 0.8260869565217391, 'loss': 1.9062, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 58, 'progress': 0.8405797101449275, 'loss': 1.6302, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 59, 'progress': 0.855072463768116, 'loss': 1.682, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 60, 'progress': 0.8695652173913043, 'loss': 2.0299, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 61, 'progress': 0.8840579710144928, 'loss': 2.1979, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 62, 'progress': 0.8985507246376812, 'loss': 2.1696, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 63, 'progress': 0.9130434782608695, 'loss': 1.7758, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 64, 'progress': 0.927536231884058, 'loss': 2.2085, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 65, 'progress': 0.9420289855072463, 'loss': 1.9272, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 66, 'progress': 0.9565217391304348, 'loss': 1.5831, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 67, 'progress': 0.9710144927536232, 'loss': 1.8233, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'iteration': 68, 'progress': 0.9855072463768116, 'loss': 2.118, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 0, 'batch_size': 4, 'lr': 0.00025, 'best_top1_acc': 6.451612903225806, 'best_top5_acc': 80.64516129032258}
+INFO:RS_utils:{'epoch': 1, 'iteration': 0, 'progress': 0.0, 'loss': 2.3255, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 2.2775, 'batch_size': 4, 'lr': 0.00025}
+ Best Top-1 Accuracy: [red]6.5%[/red]	Best Top-5 Accuracy: [red]80.6%[/red]
+INFO:RS_utils:{'epoch': 1, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 1.2997, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 2.5963, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 2.0183, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 1.775, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 1.8006, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 2.6485, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 2.3452, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 1.4742, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 1.9414, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 2.1376, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 1.5784, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 1.8164, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 1.4832, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 1.7571, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 2.4189, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 1.5668, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 2.0211, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 2.0242, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 1.8774, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 1.9426, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 1.8176, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 2.4393, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 1.6587, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 1.5766, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 2.0541, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 2.0129, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 1.9898, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 1.7111, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 1.8138, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 2.2534, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 2.0915, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 1.8669, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 1.9426, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 1.8149, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 1.4962, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 2.1722, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 2.0871, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 39, 'progress': 0.5652173913043478, 'loss': 1.977, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 40, 'progress': 0.5797101449275363, 'loss': 2.3085, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 41, 'progress': 0.5942028985507246, 'loss': 1.9313, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 42, 'progress': 0.6086956521739131, 'loss': 2.0786, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 43, 'progress': 0.6231884057971014, 'loss': 1.9562, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 44, 'progress': 0.6376811594202898, 'loss': 1.8376, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 45, 'progress': 0.6521739130434783, 'loss': 1.9211, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 46, 'progress': 0.6666666666666666, 'loss': 2.0356, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 47, 'progress': 0.6811594202898551, 'loss': 1.8872, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 48, 'progress': 0.6956521739130435, 'loss': 2.0312, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 49, 'progress': 0.7101449275362319, 'loss': 1.9941, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 50, 'progress': 0.7246376811594203, 'loss': 1.5898, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 51, 'progress': 0.7391304347826086, 'loss': 2.5299, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 52, 'progress': 0.7536231884057971, 'loss': 2.3913, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 53, 'progress': 0.7681159420289855, 'loss': 1.6702, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 54, 'progress': 0.782608695652174, 'loss': 2.0652, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 55, 'progress': 0.7971014492753623, 'loss': 2.496, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 56, 'progress': 0.8115942028985508, 'loss': 1.3899, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 57, 'progress': 0.8260869565217391, 'loss': 2.2783, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 58, 'progress': 0.8405797101449275, 'loss': 1.6832, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 59, 'progress': 0.855072463768116, 'loss': 2.2671, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 60, 'progress': 0.8695652173913043, 'loss': 2.0246, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 61, 'progress': 0.8840579710144928, 'loss': 1.8023, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 62, 'progress': 0.8985507246376812, 'loss': 2.179, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 63, 'progress': 0.9130434782608695, 'loss': 1.9088, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 64, 'progress': 0.927536231884058, 'loss': 1.6654, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 65, 'progress': 0.9420289855072463, 'loss': 2.2866, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 66, 'progress': 0.9565217391304348, 'loss': 1.8744, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 67, 'progress': 0.9710144927536232, 'loss': 1.6745, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'iteration': 68, 'progress': 0.9855072463768116, 'loss': 1.9435, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 1, 'batch_size': 4, 'lr': 0.00025, 'best_top1_acc': 6.451612903225806, 'best_top5_acc': 70.96774193548387}
+INFO:RS_utils:{'epoch': 2, 'iteration': 0, 'progress': 0.0, 'loss': 1.8002, 'batch_size': 4, 'lr': 0.00025}
+ Best Top-1 Accuracy: [red]6.5%[/red]	Best Top-5 Accuracy: [red]71.0%[/red]
+INFO:RS_utils:{'epoch': 2, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 2.0386, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 2.1064, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 1.7297, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 1.8581, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 2.2779, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 1.7308, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 2.2253, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 1.6363, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 1.9753, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 2.2385, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 2.6841, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 1.6216, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 2.1071, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 1.6536, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 2.3296, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 1.918, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 1.9329, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 1.9483, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 2.0604, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 1.8076, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 1.5795, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 1.8692, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 1.9901, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 1.9046, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 1.6171, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 2.2187, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 1.8646, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 1.9123, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 2.4111, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 1.924, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 2.29, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 1.8846, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 2.3243, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 2.044, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 1.7568, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 1.8331, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 1.933, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 1.6663, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 39, 'progress': 0.5652173913043478, 'loss': 1.8239, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 40, 'progress': 0.5797101449275363, 'loss': 2.1503, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 41, 'progress': 0.5942028985507246, 'loss': 2.1309, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 42, 'progress': 0.6086956521739131, 'loss': 1.9399, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 43, 'progress': 0.6231884057971014, 'loss': 2.2176, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 44, 'progress': 0.6376811594202898, 'loss': 2.4612, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 45, 'progress': 0.6521739130434783, 'loss': 1.8071, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 46, 'progress': 0.6666666666666666, 'loss': 2.0276, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 47, 'progress': 0.6811594202898551, 'loss': 1.801, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 48, 'progress': 0.6956521739130435, 'loss': 1.5787, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 49, 'progress': 0.7101449275362319, 'loss': 1.923, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 50, 'progress': 0.7246376811594203, 'loss': 2.062, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 51, 'progress': 0.7391304347826086, 'loss': 2.3922, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 52, 'progress': 0.7536231884057971, 'loss': 1.9767, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 53, 'progress': 0.7681159420289855, 'loss': 2.2565, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 54, 'progress': 0.782608695652174, 'loss': 2.0668, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 55, 'progress': 0.7971014492753623, 'loss': 2.2748, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 56, 'progress': 0.8115942028985508, 'loss': 2.0057, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 57, 'progress': 0.8260869565217391, 'loss': 2.0122, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 58, 'progress': 0.8405797101449275, 'loss': 1.9074, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 59, 'progress': 0.855072463768116, 'loss': 1.977, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 60, 'progress': 0.8695652173913043, 'loss': 2.0404, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 61, 'progress': 0.8840579710144928, 'loss': 2.2683, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 62, 'progress': 0.8985507246376812, 'loss': 2.3152, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 63, 'progress': 0.9130434782608695, 'loss': 2.2596, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 64, 'progress': 0.927536231884058, 'loss': 1.9409, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 65, 'progress': 0.9420289855072463, 'loss': 2.0059, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 66, 'progress': 0.9565217391304348, 'loss': 1.9691, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 67, 'progress': 0.9710144927536232, 'loss': 1.7948, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'iteration': 68, 'progress': 0.9855072463768116, 'loss': 1.79, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 2, 'batch_size': 4, 'lr': 0.00025, 'best_top1_acc': 41.935483870967744, 'best_top5_acc': 90.3225806451613}
+ Best Top-1 Accuracy: [red]41.9%[/red]	Best Top-5 Accuracy: [red]90.3%[/red]
+INFO:RS_utils:{'epoch': 3, 'iteration': 0, 'progress': 0.0, 'loss': 1.7778, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 1.8758, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 1.6045, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 2.0921, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 1.7506, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 2.1879, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 1.8618, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 1.8471, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 2.47, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 2.3458, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 1.7395, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 1.557, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 2.422, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 1.7922, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 1.7132, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 1.8483, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 1.9796, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 1.9364, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 2.0078, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 1.9701, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 2.4778, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 2.5652, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 1.9666, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 1.9821, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 2.0499, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 2.2459, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 1.6454, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 2.2087, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 1.3882, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 1.9603, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 2.131, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 1.7548, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 2.1635, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 1.9859, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 1.7137, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 1.7267, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 1.9828, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 1.8534, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 2.3315, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 39, 'progress': 0.5652173913043478, 'loss': 1.8465, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 40, 'progress': 0.5797101449275363, 'loss': 1.9649, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 41, 'progress': 0.5942028985507246, 'loss': 2.2177, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 42, 'progress': 0.6086956521739131, 'loss': 2.1177, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 43, 'progress': 0.6231884057971014, 'loss': 1.8907, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 44, 'progress': 0.6376811594202898, 'loss': 1.9141, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 45, 'progress': 0.6521739130434783, 'loss': 1.7585, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 46, 'progress': 0.6666666666666666, 'loss': 1.7883, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 47, 'progress': 0.6811594202898551, 'loss': 1.7239, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 48, 'progress': 0.6956521739130435, 'loss': 1.9387, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 49, 'progress': 0.7101449275362319, 'loss': 2.0993, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 50, 'progress': 0.7246376811594203, 'loss': 1.7518, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 51, 'progress': 0.7391304347826086, 'loss': 1.8639, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 52, 'progress': 0.7536231884057971, 'loss': 2.0218, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 53, 'progress': 0.7681159420289855, 'loss': 2.4316, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 54, 'progress': 0.782608695652174, 'loss': 2.308, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 55, 'progress': 0.7971014492753623, 'loss': 1.7022, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 56, 'progress': 0.8115942028985508, 'loss': 1.9912, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 57, 'progress': 0.8260869565217391, 'loss': 2.282, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 58, 'progress': 0.8405797101449275, 'loss': 1.7055, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 59, 'progress': 0.855072463768116, 'loss': 1.9827, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 60, 'progress': 0.8695652173913043, 'loss': 2.0777, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 61, 'progress': 0.8840579710144928, 'loss': 1.8956, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 62, 'progress': 0.8985507246376812, 'loss': 2.0855, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 63, 'progress': 0.9130434782608695, 'loss': 2.1163, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 64, 'progress': 0.927536231884058, 'loss': 2.135, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 65, 'progress': 0.9420289855072463, 'loss': 1.9198, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 66, 'progress': 0.9565217391304348, 'loss': 1.9281, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 67, 'progress': 0.9710144927536232, 'loss': 1.85, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'iteration': 68, 'progress': 0.9855072463768116, 'loss': 1.8393, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 3, 'batch_size': 4, 'lr': 0.00025, 'best_top1_acc': 41.935483870967744, 'best_top5_acc': 70.96774193548387}
+ Best Top-1 Accuracy: [red]41.9%[/red]	Best Top-5 Accuracy: [red]71.0%[/red]
+INFO:RS_utils:{'epoch': 4, 'iteration': 0, 'progress': 0.0, 'loss': 1.91, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 2.1478, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 1.9544, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 1.7231, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 2.3087, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 2.0756, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 1.7785, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 1.8195, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 2.111, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 1.7605, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 2.2567, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 1.5232, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 1.7323, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 2.1438, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 1.7497, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 1.7455, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 1.986, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 1.797, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 1.5985, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 1.9257, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 2.2516, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 1.6386, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 2.2335, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 1.9803, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 1.8324, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 1.8559, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 2.157, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 2.116, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 1.9409, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 1.8758, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 1.5934, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 1.7299, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 2.0641, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 1.8357, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 1.7948, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 1.3982, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 1.9818, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 2.2404, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 2.1289, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 39, 'progress': 0.5652173913043478, 'loss': 1.9757, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 40, 'progress': 0.5797101449275363, 'loss': 1.7049, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 41, 'progress': 0.5942028985507246, 'loss': 1.4866, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 42, 'progress': 0.6086956521739131, 'loss': 2.0305, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 43, 'progress': 0.6231884057971014, 'loss': 2.0089, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 44, 'progress': 0.6376811594202898, 'loss': 2.0656, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 45, 'progress': 0.6521739130434783, 'loss': 2.1416, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 46, 'progress': 0.6666666666666666, 'loss': 2.0243, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 47, 'progress': 0.6811594202898551, 'loss': 1.6213, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 48, 'progress': 0.6956521739130435, 'loss': 1.9735, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 49, 'progress': 0.7101449275362319, 'loss': 1.981, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 50, 'progress': 0.7246376811594203, 'loss': 2.0999, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 51, 'progress': 0.7391304347826086, 'loss': 2.109, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 52, 'progress': 0.7536231884057971, 'loss': 1.9744, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 53, 'progress': 0.7681159420289855, 'loss': 2.2271, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 54, 'progress': 0.782608695652174, 'loss': 1.8532, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 55, 'progress': 0.7971014492753623, 'loss': 1.8546, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 56, 'progress': 0.8115942028985508, 'loss': 1.8504, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 57, 'progress': 0.8260869565217391, 'loss': 2.0452, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 58, 'progress': 0.8405797101449275, 'loss': 2.0227, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 59, 'progress': 0.855072463768116, 'loss': 1.9403, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 60, 'progress': 0.8695652173913043, 'loss': 2.0261, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 61, 'progress': 0.8840579710144928, 'loss': 2.0303, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 62, 'progress': 0.8985507246376812, 'loss': 2.0237, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 63, 'progress': 0.9130434782608695, 'loss': 1.9742, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 64, 'progress': 0.927536231884058, 'loss': 2.1178, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 65, 'progress': 0.9420289855072463, 'loss': 1.7904, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 66, 'progress': 0.9565217391304348, 'loss': 1.9849, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 67, 'progress': 0.9710144927536232, 'loss': 2.2278, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 4, 'iteration': 68, 'progress': 0.9855072463768116, 'loss': 1.8364, 'batch_size': 4, 'lr': 0.00025}
+ Best Top-1 Accuracy: [red]41.9%[/red]	Best Top-5 Accuracy: [red]83.9%[/red]
+INFO:RS_utils:{'epoch': 4, 'batch_size': 4, 'lr': 0.00025, 'best_top1_acc': 41.935483870967744, 'best_top5_acc': 83.87096774193549}
+INFO:RS_utils:{'epoch': 5, 'iteration': 0, 'progress': 0.0, 'loss': 1.8822, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 2.0807, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 1.8443, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 1.8717, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 2.1925, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 2.2323, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 1.8588, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 2.1708, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 1.649, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 1.6503, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 1.9647, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 1.7778, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 2.2428, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 1.891, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 2.2553, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 1.5998, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 2.2488, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 1.9118, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 2.3367, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 2.1946, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 2.4393, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 2.3331, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 2.1444, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 1.6444, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 1.604, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 1.8454, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 1.8647, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 1.9207, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 2.028, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 1.9626, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 1.8705, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 1.7377, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 2.2119, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 2.1194, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 1.8679, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 2.0839, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 2.0316, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 1.7549, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 2.299, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 39, 'progress': 0.5652173913043478, 'loss': 1.9721, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 40, 'progress': 0.5797101449275363, 'loss': 2.0477, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 41, 'progress': 0.5942028985507246, 'loss': 1.7361, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 42, 'progress': 0.6086956521739131, 'loss': 1.8519, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 43, 'progress': 0.6231884057971014, 'loss': 1.7772, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 44, 'progress': 0.6376811594202898, 'loss': 1.9067, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 45, 'progress': 0.6521739130434783, 'loss': 1.8612, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 46, 'progress': 0.6666666666666666, 'loss': 1.9571, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 47, 'progress': 0.6811594202898551, 'loss': 1.513, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 48, 'progress': 0.6956521739130435, 'loss': 1.9075, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 49, 'progress': 0.7101449275362319, 'loss': 1.8957, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 50, 'progress': 0.7246376811594203, 'loss': 1.4856, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 51, 'progress': 0.7391304347826086, 'loss': 2.1472, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 52, 'progress': 0.7536231884057971, 'loss': 1.9031, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 53, 'progress': 0.7681159420289855, 'loss': 1.6854, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 54, 'progress': 0.782608695652174, 'loss': 1.7213, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 55, 'progress': 0.7971014492753623, 'loss': 1.9798, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 56, 'progress': 0.8115942028985508, 'loss': 1.943, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 57, 'progress': 0.8260869565217391, 'loss': 2.3748, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 58, 'progress': 0.8405797101449275, 'loss': 1.9936, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 59, 'progress': 0.855072463768116, 'loss': 2.123, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 60, 'progress': 0.8695652173913043, 'loss': 2.0344, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 61, 'progress': 0.8840579710144928, 'loss': 2.2411, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 62, 'progress': 0.8985507246376812, 'loss': 1.9943, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 63, 'progress': 0.9130434782608695, 'loss': 1.8469, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 64, 'progress': 0.927536231884058, 'loss': 1.8383, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 65, 'progress': 0.9420289855072463, 'loss': 2.0952, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 66, 'progress': 0.9565217391304348, 'loss': 1.8703, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 67, 'progress': 0.9710144927536232, 'loss': 1.8949, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 5, 'iteration': 68, 'progress': 0.9855072463768116, 'loss': 1.7138, 'batch_size': 4, 'lr': 0.00025}
+ Best Top-1 Accuracy: [red]41.9%[/red]	Best Top-5 Accuracy: [red]87.1%[/red]
+INFO:RS_utils:{'epoch': 5, 'batch_size': 4, 'lr': 0.00025, 'best_top1_acc': 41.935483870967744, 'best_top5_acc': 87.09677419354838}
+INFO:RS_utils:{'epoch': 6, 'iteration': 0, 'progress': 0.0, 'loss': 1.7657, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 1.834, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 2.1412, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 2.0496, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 1.9499, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 1.8529, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 1.9277, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 1.7759, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 1.8418, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 1.8384, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 1.9611, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 1.8629, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 2.1575, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 1.7005, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 2.225, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 2.0798, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 1.9689, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 2.2665, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 2.1771, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 2.1829, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 1.6361, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 2.0115, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 1.8816, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 1.9983, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 2.0541, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 1.951, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 1.9625, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 2.0349, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 2.0584, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 2.0036, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 1.6446, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 1.7529, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 1.896, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 2.1782, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 2.2671, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 1.9021, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 1.8372, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 1.8296, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 2.1187, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 39, 'progress': 0.5652173913043478, 'loss': 1.6436, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 40, 'progress': 0.5797101449275363, 'loss': 2.2358, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 41, 'progress': 0.5942028985507246, 'loss': 1.7974, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 42, 'progress': 0.6086956521739131, 'loss': 1.8397, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 43, 'progress': 0.6231884057971014, 'loss': 2.0741, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 44, 'progress': 0.6376811594202898, 'loss': 2.1089, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 45, 'progress': 0.6521739130434783, 'loss': 1.7584, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 46, 'progress': 0.6666666666666666, 'loss': 1.7053, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 47, 'progress': 0.6811594202898551, 'loss': 1.7113, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 48, 'progress': 0.6956521739130435, 'loss': 2.0756, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 49, 'progress': 0.7101449275362319, 'loss': 1.5577, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 50, 'progress': 0.7246376811594203, 'loss': 1.6344, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 51, 'progress': 0.7391304347826086, 'loss': 1.565, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 52, 'progress': 0.7536231884057971, 'loss': 2.0314, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 53, 'progress': 0.7681159420289855, 'loss': 1.7505, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 54, 'progress': 0.782608695652174, 'loss': 1.5041, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 55, 'progress': 0.7971014492753623, 'loss': 1.9096, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 56, 'progress': 0.8115942028985508, 'loss': 1.2959, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 57, 'progress': 0.8260869565217391, 'loss': 2.21, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 58, 'progress': 0.8405797101449275, 'loss': 1.2411, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 59, 'progress': 0.855072463768116, 'loss': 1.8794, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 60, 'progress': 0.8695652173913043, 'loss': 1.6594, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 61, 'progress': 0.8840579710144928, 'loss': 2.6158, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 62, 'progress': 0.8985507246376812, 'loss': 2.3964, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 63, 'progress': 0.9130434782608695, 'loss': 2.0352, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 64, 'progress': 0.927536231884058, 'loss': 2.5425, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 65, 'progress': 0.9420289855072463, 'loss': 2.2568, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 66, 'progress': 0.9565217391304348, 'loss': 2.4923, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 67, 'progress': 0.9710144927536232, 'loss': 2.08, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 6, 'iteration': 68, 'progress': 0.9855072463768116, 'loss': 1.9738, 'batch_size': 4, 'lr': 0.00025}
+ Best Top-1 Accuracy: [red]41.9%[/red]	Best Top-5 Accuracy: [red]87.1%[/red]
+INFO:RS_utils:{'epoch': 6, 'batch_size': 4, 'lr': 0.00025, 'best_top1_acc': 41.935483870967744, 'best_top5_acc': 87.09677419354838}
+INFO:RS_utils:{'epoch': 7, 'iteration': 0, 'progress': 0.0, 'loss': 1.8491, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 1, 'progress': 0.014492753623188406, 'loss': 1.5487, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 2, 'progress': 0.028985507246376812, 'loss': 1.7527, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 3, 'progress': 0.043478260869565216, 'loss': 1.6667, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 4, 'progress': 0.057971014492753624, 'loss': 1.8256, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 5, 'progress': 0.07246376811594203, 'loss': 1.7506, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 6, 'progress': 0.08695652173913043, 'loss': 1.9884, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 7, 'progress': 0.10144927536231885, 'loss': 2.0515, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 8, 'progress': 0.11594202898550725, 'loss': 2.2355, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 9, 'progress': 0.13043478260869565, 'loss': 1.5983, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 10, 'progress': 0.14492753623188406, 'loss': 2.033, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 11, 'progress': 0.15942028985507245, 'loss': 1.6202, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 12, 'progress': 0.17391304347826086, 'loss': 1.9859, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 13, 'progress': 0.18840579710144928, 'loss': 1.9385, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 14, 'progress': 0.2028985507246377, 'loss': 1.8442, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 15, 'progress': 0.21739130434782608, 'loss': 1.7403, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 16, 'progress': 0.2318840579710145, 'loss': 2.0133, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 17, 'progress': 0.2463768115942029, 'loss': 2.0068, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 18, 'progress': 0.2608695652173913, 'loss': 2.0231, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 19, 'progress': 0.2753623188405797, 'loss': 1.7725, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 20, 'progress': 0.2898550724637681, 'loss': 1.7358, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 21, 'progress': 0.30434782608695654, 'loss': 1.9834, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 22, 'progress': 0.3188405797101449, 'loss': 1.6859, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 23, 'progress': 0.3333333333333333, 'loss': 1.7752, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 24, 'progress': 0.34782608695652173, 'loss': 1.7536, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 25, 'progress': 0.36231884057971014, 'loss': 2.2555, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 26, 'progress': 0.37681159420289856, 'loss': 1.8936, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 27, 'progress': 0.391304347826087, 'loss': 1.9056, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 28, 'progress': 0.4057971014492754, 'loss': 1.6189, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 29, 'progress': 0.42028985507246375, 'loss': 1.1853, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 30, 'progress': 0.43478260869565216, 'loss': 1.9748, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 31, 'progress': 0.4492753623188406, 'loss': 2.2067, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 32, 'progress': 0.463768115942029, 'loss': 2.2546, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 33, 'progress': 0.4782608695652174, 'loss': 2.2827, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 34, 'progress': 0.4927536231884058, 'loss': 1.9625, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 35, 'progress': 0.5072463768115942, 'loss': 1.8961, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 36, 'progress': 0.5217391304347826, 'loss': 1.7151, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 37, 'progress': 0.5362318840579711, 'loss': 2.273, 'batch_size': 4, 'lr': 0.00025}
+INFO:RS_utils:{'epoch': 7, 'iteration': 38, 'progress': 0.5507246376811594, 'loss': 1.9513, 'batch_size': 4, 'lr': 0.00025}
+Traceback (most recent call last):
+  File "01.finetune.py", line 116, in <module>
+    pred = model(X)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/lightning/fabric/wrappers.py", line 141, in forward
+    output = self._forward_module(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1519, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 1355, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/convnext.py", line 420, in forward
+    x = self.forward_features(x)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/convnext.py", line 412, in forward_features
+    x = self.stages(x)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/convnext.py", line 233, in forward
+    x = self.blocks(x)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/container.py", line 215, in forward
+    input = module(input)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/models/convnext.py", line 158, in forward
+    x = self.norm(x)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mnt/hdd/eric/.local/lib/python3.8/site-packages/timm/layers/norm.py", line 57, in forward
+    x = F.layer_norm(x, self.normalized_shape, self.weight, self.bias, self.eps)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/nn/functional.py", line 2543, in layer_norm
+    return torch.layer_norm(input, normalized_shape, weight, bias, eps, torch.backends.cudnn.enabled)
+KeyboardInterrupt

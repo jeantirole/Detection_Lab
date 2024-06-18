@@ -1,0 +1,173 @@
+2024-06-18 14:37:44,510 INFO    StreamThr :315850 [internal.py:wandb_internal():86] W&B internal server running at pid: 315850, started at: 2024-06-18 14:37:44.509631
+2024-06-18 14:37:44,514 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: status
+2024-06-18 14:37:44,519 INFO    WriterThread:315850 [datastore.py:open_for_write():87] open: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/run-26qyrvmu.wandb
+2024-06-18 14:37:44,520 DEBUG   SenderThread:315850 [sender.py:send():379] send: header
+2024-06-18 14:37:44,586 DEBUG   SenderThread:315850 [sender.py:send():379] send: run
+2024-06-18 14:37:45,163 INFO    SenderThread:315850 [dir_watcher.py:__init__():211] watching files in: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files
+2024-06-18 14:37:45,163 INFO    SenderThread:315850 [sender.py:_start_run_threads():1124] run started: 26qyrvmu with start time 1718689064.509714
+2024-06-18 14:37:45,181 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: check_version
+2024-06-18 14:37:45,182 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: check_version
+2024-06-18 14:37:45,299 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: run_start
+2024-06-18 14:37:45,319 DEBUG   HandlerThread:315850 [system_info.py:__init__():26] System info init
+2024-06-18 14:37:45,319 DEBUG   HandlerThread:315850 [system_info.py:__init__():41] System info init done
+2024-06-18 14:37:45,319 INFO    HandlerThread:315850 [system_monitor.py:start():194] Starting system monitor
+2024-06-18 14:37:45,319 INFO    SystemMonitor:315850 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-18 14:37:45,321 INFO    HandlerThread:315850 [system_monitor.py:probe():214] Collecting system info
+2024-06-18 14:37:45,321 INFO    SystemMonitor:315850 [interfaces.py:start():190] Started cpu monitoring
+2024-06-18 14:37:45,322 INFO    SystemMonitor:315850 [interfaces.py:start():190] Started disk monitoring
+2024-06-18 14:37:45,325 INFO    SystemMonitor:315850 [interfaces.py:start():190] Started gpu monitoring
+2024-06-18 14:37:45,328 INFO    SystemMonitor:315850 [interfaces.py:start():190] Started memory monitoring
+2024-06-18 14:37:45,332 INFO    SystemMonitor:315850 [interfaces.py:start():190] Started network monitoring
+2024-06-18 14:37:45,388 DEBUG   HandlerThread:315850 [system_info.py:probe():150] Probing system
+2024-06-18 14:37:45,398 DEBUG   HandlerThread:315850 [system_info.py:_probe_git():135] Probing git
+2024-06-18 14:37:45,418 DEBUG   HandlerThread:315850 [system_info.py:_probe_git():143] Probing git done
+2024-06-18 14:37:45,418 DEBUG   HandlerThread:315850 [system_info.py:probe():198] Probing system done
+2024-06-18 14:37:45,418 DEBUG   HandlerThread:315850 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-105-generic-x86_64-with-glibc2.17', 'python': '3.8.18', 'heartbeatAt': '2024-06-18T05:37:45.388722', 'startedAt': '2024-06-18T05:37:44.498184', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '01.finetune.py', 'codePathLocal': '01.finetune.py', 'codePath': '07.Challenge/01.MapYourCity_HuggingFace/01.finetune.py', 'git': {'remote': 'https://github.com/jeantirole/Lab_Detection', 'commit': '60d60d506aaaff20100f69303cfd10fa9438a2d1'}, 'email': 'jeantirole01@gmail.com', 'root': '/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection', 'host': 'telepix', 'username': 'eric', 'executable': '/mnt/hdd/eric/.conda/envs/mapv2/bin/python', 'cpu_count': 36, 'cpu_count_logical': 72, 'cpu_freq': {'current': 2577.7778055555555, 'min': 1000.0, 'max': 3900.0}, 'cpu_freq_per_core': [{'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 1798.166, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}, {'current': 2600.0, 'min': 1000.0, 'max': 3900.0}], 'disk': {'/': {'total': 915.3232879638672, 'used': 685.9629821777344}}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}], 'memory': {'total': 251.4969596862793}}
+2024-06-18 14:37:45,419 INFO    HandlerThread:315850 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-18 14:37:45,419 INFO    HandlerThread:315850 [system_monitor.py:probe():227] Publishing system info
+2024-06-18 14:37:45,419 DEBUG   HandlerThread:315850 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-06-18 14:37:46,168 INFO    Thread-12 :315850 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/conda-environment.yaml
+2024-06-18 14:37:54,867 DEBUG   HandlerThread:315850 [system_info.py:_save_conda():222] Saving conda packages done
+2024-06-18 14:37:54,870 INFO    HandlerThread:315850 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-18 14:37:54,881 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: status_report
+2024-06-18 14:37:54,881 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-18 14:37:54,881 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-18 14:37:54,883 DEBUG   SenderThread:315850 [sender.py:send():379] send: exit
+2024-06-18 14:37:54,883 INFO    SenderThread:315850 [sender.py:send_exit():586] handling exit code: 255
+2024-06-18 14:37:54,884 INFO    SenderThread:315850 [sender.py:send_exit():588] handling runtime: 9
+2024-06-18 14:37:54,888 INFO    SenderThread:315850 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-18 14:37:54,889 INFO    SenderThread:315850 [sender.py:send_exit():594] send defer
+2024-06-18 14:37:54,889 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: poll_exit
+2024-06-18 14:37:54,889 DEBUG   SenderThread:315850 [sender.py:send():379] send: files
+2024-06-18 14:37:54,890 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:54,890 INFO    SenderThread:315850 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-06-18 14:37:54,890 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 0
+2024-06-18 14:37:54,892 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:54,892 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-06-18 14:37:54,892 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 1
+2024-06-18 14:37:54,892 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:54,892 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 1
+2024-06-18 14:37:54,893 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:54,893 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-06-18 14:37:54,893 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 2
+2024-06-18 14:37:54,894 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:54,894 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 2
+2024-06-18 14:37:54,894 INFO    HandlerThread:315850 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-18 14:37:54,895 INFO    HandlerThread:315850 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-18 14:37:54,896 DEBUG   SystemMonitor:315850 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-18 14:37:54,896 INFO    HandlerThread:315850 [interfaces.py:finish():202] Joined disk monitor
+2024-06-18 14:37:54,896 DEBUG   SystemMonitor:315850 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-18 14:37:54,897 DEBUG   SystemMonitor:315850 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-18 14:37:55,168 INFO    Thread-12 :315850 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/conda-environment.yaml
+2024-06-18 14:37:55,168 INFO    Thread-12 :315850 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/wandb-summary.json
+2024-06-18 14:37:55,169 INFO    Thread-12 :315850 [dir_watcher.py:_on_file_created():271] file/dir created: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/wandb-metadata.json
+2024-06-18 14:37:55,194 INFO    HandlerThread:315850 [interfaces.py:finish():202] Joined gpu monitor
+2024-06-18 14:37:55,194 INFO    HandlerThread:315850 [interfaces.py:finish():202] Joined memory monitor
+2024-06-18 14:37:55,195 INFO    HandlerThread:315850 [interfaces.py:finish():202] Joined network monitor
+2024-06-18 14:37:55,196 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:55,196 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-06-18 14:37:55,196 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 3
+2024-06-18 14:37:55,196 DEBUG   SenderThread:315850 [sender.py:send():379] send: stats
+2024-06-18 14:37:55,197 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:55,198 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 3
+2024-06-18 14:37:55,198 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:55,198 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-06-18 14:37:55,198 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 4
+2024-06-18 14:37:55,199 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:55,199 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 4
+2024-06-18 14:37:55,199 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:55,200 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-06-18 14:37:55,200 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 5
+2024-06-18 14:37:55,200 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:55,200 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 5
+2024-06-18 14:37:55,201 DEBUG   SenderThread:315850 [sender.py:send():379] send: summary
+2024-06-18 14:37:55,202 INFO    SenderThread:315850 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-06-18 14:37:55,202 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:55,202 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-06-18 14:37:55,202 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 6
+2024-06-18 14:37:55,203 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:55,203 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 6
+2024-06-18 14:37:55,203 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:55,204 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-06-18 14:37:55,204 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 7
+2024-06-18 14:37:55,204 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: status_report
+2024-06-18 14:37:55,204 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:55,204 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 7
+2024-06-18 14:37:55,205 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:55,205 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-06-18 14:37:55,205 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 8
+2024-06-18 14:37:55,206 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:55,206 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 8
+2024-06-18 14:37:55,206 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:55,207 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-06-18 14:37:55,207 INFO    SenderThread:315850 [job_builder.py:build():318] Attempting to build job artifact
+2024-06-18 14:37:55,207 WARNING SenderThread:315850 [job_builder.py:_log_if_verbose():210] No requirements.txt found, not creating job artifact. See https://docs.wandb.ai/guides/launch/create-job
+2024-06-18 14:37:55,207 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 9
+2024-06-18 14:37:55,207 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:55,208 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 9
+2024-06-18 14:37:55,208 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:55,208 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-06-18 14:37:55,208 INFO    SenderThread:315850 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-18 14:37:55,694 INFO    wandb-upload_0:315850 [upload_job.py:push():131] Uploaded file /tmp/tmpzcs4dcvwwandb/5hwe1ncs-wandb-metadata.json
+2024-06-18 14:37:55,786 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-18 14:37:56,168 INFO    Thread-12 :315850 [dir_watcher.py:_on_file_modified():288] file/dir modified: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/wandb-summary.json
+2024-06-18 14:37:56,169 INFO    SenderThread:315850 [dir_watcher.py:finish():388] scan: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files
+2024-06-18 14:37:56,170 INFO    SenderThread:315850 [dir_watcher.py:finish():402] scan save: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/wandb-metadata.json wandb-metadata.json
+2024-06-18 14:37:56,170 INFO    SenderThread:315850 [dir_watcher.py:finish():402] scan save: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/config.yaml config.yaml
+2024-06-18 14:37:56,170 INFO    SenderThread:315850 [dir_watcher.py:finish():402] scan save: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/conda-environment.yaml conda-environment.yaml
+2024-06-18 14:37:56,171 INFO    SenderThread:315850 [dir_watcher.py:finish():402] scan save: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/wandb-summary.json wandb-summary.json
+2024-06-18 14:37:56,181 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 10
+2024-06-18 14:37:56,182 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: poll_exit
+2024-06-18 14:37:56,183 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:56,188 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 10
+2024-06-18 14:37:56,189 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:56,190 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-06-18 14:37:56,190 INFO    SenderThread:315850 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-18 14:37:56,632 INFO    wandb-upload_1:315850 [upload_job.py:push():131] Uploaded file /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/config.yaml
+2024-06-18 14:37:56,787 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-18 14:37:56,788 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: poll_exit
+2024-06-18 14:37:56,902 INFO    wandb-upload_0:315850 [upload_job.py:push():131] Uploaded file /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/conda-environment.yaml
+2024-06-18 14:37:56,913 INFO    wandb-upload_2:315850 [upload_job.py:push():131] Uploaded file /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/files/wandb-summary.json
+2024-06-18 14:37:57,114 INFO    Thread-11 :315850 [sender.py:transition_state():614] send defer: 11
+2024-06-18 14:37:57,114 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:57,114 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 11
+2024-06-18 14:37:57,115 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:57,115 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-06-18 14:37:57,115 INFO    SenderThread:315850 [file_pusher.py:join():178] waiting for file pusher
+2024-06-18 14:37:57,116 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 12
+2024-06-18 14:37:57,116 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:57,116 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 12
+2024-06-18 14:37:57,117 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:57,117 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-06-18 14:37:57,117 INFO    SenderThread:315850 [file_stream.py:finish():614] file stream finish called
+2024-06-18 14:37:57,519 INFO    SenderThread:315850 [file_stream.py:finish():618] file stream finish is done
+2024-06-18 14:37:57,519 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 13
+2024-06-18 14:37:57,520 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:57,520 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 13
+2024-06-18 14:37:57,520 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:57,521 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-06-18 14:37:57,521 INFO    SenderThread:315850 [sender.py:transition_state():614] send defer: 14
+2024-06-18 14:37:57,521 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: defer
+2024-06-18 14:37:57,522 INFO    HandlerThread:315850 [handler.py:handle_request_defer():172] handle defer: 14
+2024-06-18 14:37:57,522 DEBUG   SenderThread:315850 [sender.py:send():379] send: final
+2024-06-18 14:37:57,523 DEBUG   SenderThread:315850 [sender.py:send():379] send: footer
+2024-06-18 14:37:57,523 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: defer
+2024-06-18 14:37:57,523 INFO    SenderThread:315850 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-06-18 14:37:57,524 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-18 14:37:57,525 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: poll_exit
+2024-06-18 14:37:57,526 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-18 14:37:57,527 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: poll_exit
+2024-06-18 14:37:57,528 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: server_info
+2024-06-18 14:37:57,528 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: get_summary
+2024-06-18 14:37:57,529 DEBUG   SenderThread:315850 [sender.py:send_request():406] send_request: server_info
+2024-06-18 14:37:57,534 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: sampled_history
+2024-06-18 14:37:57,535 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-18 14:37:57,725 INFO    MainThread:315850 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-06-18 14:37:57,725 INFO    MainThread:315850 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-06-18 14:37:57,725 INFO    MainThread:315850 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-06-18 14:37:57,726 DEBUG   HandlerThread:315850 [handler.py:handle_request():146] handle_request: shutdown
+2024-06-18 14:37:57,726 INFO    HandlerThread:315850 [handler.py:finish():866] shutting down handler
+2024-06-18 14:37:58,529 INFO    WriterThread:315850 [datastore.py:close():296] close: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_143744-26qyrvmu/run-26qyrvmu.wandb
+2024-06-18 14:37:58,725 INFO    SenderThread:315850 [sender.py:finish():1546] shutting down sender
+2024-06-18 14:37:58,725 INFO    SenderThread:315850 [file_pusher.py:finish():172] shutting down file pusher
+2024-06-18 14:37:58,725 INFO    SenderThread:315850 [file_pusher.py:join():178] waiting for file pusher

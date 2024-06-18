@@ -1,0 +1,46 @@
+[34m[1mwandb[39m[22m: [33mWARNING[39m Calling wandb.run.save without any arguments is deprecated.Changes to attributes are automatically persisted.
+INFO: You are using a CUDA device ('NVIDIA GeForce RTX 3090') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+INFO:lightning.pytorch.utilities.rank_zero:You are using a CUDA device ('NVIDIA GeForce RTX 3090') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+INFO: Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/2
+INFO:lightning.fabric.utilities.distributed:Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/2
+INFO: ----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 2 processes
+----------------------------------------------------------------------------------------------------
+INFO:lightning.pytorch.utilities.rank_zero:----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 2 processes
+----------------------------------------------------------------------------------------------------
+INFO:timm.models._builder:Loading pretrained weights from Hugging Face hub (timm/vit_huge_patch14_clip_336.laion2b_ft_in12k_in1k)
+INFO:timm.models._hub:[timm/vit_huge_patch14_clip_336.laion2b_ft_in12k_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+INFO:RS_utils:{'input_size': (3, 336, 336), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+INFO:RS_utils:Compose(
+    Resize(size=(336, 336), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(336, 336))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)
+fabric
+INFO:RS_utils:{'epoch': 0, 'iteration': 0, 'progress': 0.0, 'loss': 1.3593, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 1, 'progress': 0.01, 'loss': 2.0502, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 2, 'progress': 0.02, 'loss': 1.8994, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 3, 'progress': 0.04, 'loss': 2.1933, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 4, 'progress': 0.05, 'loss': 2.0942, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 5, 'progress': 0.07, 'loss': 2.5146, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 6, 'progress': 0.08, 'loss': 1.0224, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 7, 'progress': 0.1, 'loss': 2.2939, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 8, 'progress': 0.11, 'loss': 2.5356, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 9, 'progress': 0.13, 'loss': 2.2265, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 10, 'progress': 0.14, 'loss': 1.5454, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 11, 'progress': 0.15, 'loss': 2.333, 'batch_size': 2, 'lr': 1.953125e-06}
+INFO:RS_utils:{'epoch': 0, 'iteration': 12, 'progress': 0.17, 'loss': 1.8471, 'batch_size': 2, 'lr': 1.953125e-06}
+Traceback (most recent call last):
+  File "01.finetune.py", line 124, in <module>
+    scaler.step(optimizer)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/cuda/amp/grad_scaler.py", line 416, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/cuda/amp/grad_scaler.py", line 314, in _maybe_opt_step
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+  File "/mnt/hdd/eric/.conda/envs/mapv2/lib/python3.8/site-packages/torch/cuda/amp/grad_scaler.py", line 314, in <genexpr>
+    if not sum(v.item() for v in optimizer_state["found_inf_per_device"].values()):
+KeyboardInterrupt

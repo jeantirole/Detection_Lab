@@ -1,0 +1,29 @@
+2024-06-18 14:28:38,405 INFO    MainThread:309033 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-06-18 14:28:38,405 INFO    MainThread:309033 [wandb_setup.py:_flush():76] Configure stats pid to 309033
+2024-06-18 14:28:38,405 INFO    MainThread:309033 [wandb_setup.py:_flush():76] Loading settings from /mnt/hdd/eric/.config/wandb/settings
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_setup.py:_flush():76] Loading settings from /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/settings
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': '07.Challenge/01.MapYourCity_HuggingFace/01.finetune.py', 'program_abspath': '/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/01.finetune.py', 'program': '01.finetune.py'}
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_init.py:_log_setup():521] Logging user logs to /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_142838-inesjzsi/logs/debug.log
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_init.py:_log_setup():522] Logging internal logs to /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb/run-20240618_142838-inesjzsi/logs/debug-internal.log
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_init.py:init():561] calling init triggers
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {}
+2024-06-18 14:28:38,406 INFO    MainThread:309033 [wandb_init.py:init():611] starting backend
+2024-06-18 14:28:38,407 INFO    MainThread:309033 [wandb_init.py:init():615] setting up manager
+2024-06-18 14:28:38,409 INFO    MainThread:309033 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-18 14:28:38,411 INFO    MainThread:309033 [wandb_init.py:init():623] backend started and connected
+2024-06-18 14:28:38,419 INFO    MainThread:309033 [wandb_init.py:init():715] updated telemetry
+2024-06-18 14:28:38,488 INFO    MainThread:309033 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-06-18 14:28:39,098 INFO    MainThread:309033 [wandb_run.py:_on_init():2357] communicating current version
+2024-06-18 14:28:39,193 INFO    MainThread:309033 [wandb_run.py:_on_init():2366] got version response upgrade_message: "wandb version 0.17.2 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-06-18 14:28:39,193 INFO    MainThread:309033 [wandb_init.py:init():799] starting run threads in backend
+2024-06-18 14:28:48,826 INFO    MainThread:309033 [wandb_run.py:_console_start():2335] atexit reg
+2024-06-18 14:28:48,826 INFO    MainThread:309033 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-06-18 14:28:48,827 INFO    MainThread:309033 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-06-18 14:28:48,827 INFO    MainThread:309033 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-06-18 14:28:48,827 INFO    MainThread:309033 [wandb_init.py:init():842] run started, returning control to user process
+2024-06-18 14:31:31,391 WARNING MsgRouterThr:309033 [router.py:message_loop():77] message_loop has been closed
