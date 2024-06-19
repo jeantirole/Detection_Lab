@@ -2,29 +2,31 @@
 DEVICE: cuda:0
 
 # DDP                
-FABRIC: True
+FABRIC: False
 DEVICES: 4
 
 # SAMPLE
 SAMPLE : False # Data sampling for test 
 
 # MODEL
+TIMM: True
+MODEL: eva_large_patch14_336.in22k_ft_in22k_in1k #VAN #eva_large_patch14_336.in22k_ft_in22k_in1k
 SAVE_DIR: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output
-MODEL: eva_large_patch14_336.in22k_ft_in22k_in1k
-RUN_VERSION : 4
-#VARIANT: L                  # specific model variants (check by running `python list_models.py`)
-#PRETRAINED: '/mnt/hdd/eric/.tmp_ipy/00.Checkpoint/Map_City/van_large_839.pth.tar'
+RUN_VERSION : 5
+
+VARIANT: L                  # specific model variants (check by running `python list_models.py`)
+PRETRAINED: '/mnt/hdd/eric/.tmp_ipy/00.Checkpoint/Map_City/van_large_839.pth.tar'
 FREEZE: false               # freeze all layers except the last head
 NUM_WORKERS: 8
 
 CLASSES_NUM : 7
-#IMAGE_SIZE: [256, 256]        # training image size
-#EVAL_IMAGE_SIZE: [256, 256]   # evaluation image size
+IMAGE_SIZE: [376, 376]        # training image size
+EVAL_IMAGE_SIZE: [376, 376]   # evaluation image size
 EPOCHS: 20                   # number of epochs to train
-BATCH_SIZE: 8            # batch size to use
+BATCH_SIZE: 16            # batch size to use
 EVAL_INTERVAL: 1            # evaluation interval
 AMP: False                  # Mixed Precision Training
-LR: 7.8125e-06 # lr = (batch_size / 1024) * 1e-3
+LR: 0.001 # lr = (batch_size / 1024) * 1e-3
 DECAY: 0.005                # lr decay rate
 STEP_SIZE: 2
 GAMMA: 0.1

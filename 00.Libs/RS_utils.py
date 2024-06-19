@@ -1097,3 +1097,36 @@ def convert_to_polygon(box):
     return polygon
 
 
+
+
+#----------------------------------------------------
+# Metric 
+
+# Classification 
+from sklearn.metrics import precision_recall_fscore_support
+from sklearn.metrics import accuracy_score
+
+class Metric_Classification:
+    def __init__(self) -> None:
+        self.reset()
+
+    def reset(self):
+        self.val = 0
+        self.avg = 0
+        self.sum = 0
+        self.count = 0
+
+    def update(self, val, n=1):
+        self.val = val
+        self.sum += val * n
+        self.count += n
+        self.avg = self.sum / self.count
+        
+    def classification_metrics(self, labels_, predictions_):
+        precision, recall, f1, _ = precision_recall_fscore_support(labels_, predictions_, average='weighted')
+        accuracy = accuracy_score(labels_, predictions_)
+        
+        return precision, recall, f1, accuracy 
+    
+    
+    

@@ -69,7 +69,7 @@ def test(dataloader, model, loss_fn):
     return top1_acc, top5_acc
 
 
-def test_v1(dataloader, model, loss_fn):
+def test_v1(dataloader, model, loss_fn,cfg):
     model.eval()
     size = len(dataloader.dataset)
     num_batches = len(dataloader)
@@ -77,7 +77,9 @@ def test_v1(dataloader, model, loss_fn):
 
     with torch.no_grad():
         for X, y in dataloader:
-            #X, y = X.to(device), y.to(device)
+            
+            if not cfg.FABRIC:
+                X, y = X.to(cfg.DEVICE), y.to(cfg.DEVICE)
             pred = model(X)
             test_loss += loss_fn(pred, y).item()
             acc1, acc5 = compute_accuracy(pred, y, topk=(1, 5))
@@ -89,3 +91,32 @@ def test_v1(dataloader, model, loss_fn):
     top5_acc /= size
     
     return top1_acc, top5_acc
+
+
+def test_v2(dataloader, model, loss_fn,cfg, metric_object):
+    model.eval()
+    size = len(dataloader.dataset)
+    num_batches = len(dataloader)
+    test_loss, top1_acc, top5_acc = 0, 0, 0
+
+    predictions_ = []
+    labels_ = []
+    with torch.no_grad():
+        for X, y in dataloader:
+            
+            if not cfg.FABRIC:
+                X, y = X.to(cfg.DEVICE), y.to(cfg.DEVICE)
+            pred = model(X)
+            
+            #--
+            predictions = torch.argmax(pred,-1)
+            predictions_.extend(predictions.cpu())
+            labels_.extend(y.cpu())
+            #--
+            test_loss += loss_fn(pred, y).item()
+            
+    #---    
+    precision, recall, f1, accuracy  = metric_object.classification_metrics(labels_,predictions_)
+    
+    
+    return precision, recall, f1, accuracy

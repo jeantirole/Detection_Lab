@@ -11,6 +11,8 @@
 *.pth
 *.pt
 *.tar
+*.log
+*.wandb
 00.Data
 /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/01.Models/04.SAM_fine/wandb
 README.md

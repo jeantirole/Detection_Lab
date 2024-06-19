@@ -1,0 +1,71 @@
+{'input_size': (3, 336, 336), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+Compose(
+    Resize(size=(336, 336), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(336, 336))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)
+{'epoch': 0, 'iteration': 0, 'progress': 0.0, 'time_remaining': '00:00:23', 'time_total': '00:00:25', 'loss': 2.6523, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 1, 'progress': 0.05, 'time_remaining': '00:00:04', 'time_total': '00:00:06', 'loss': 14.764, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 2, 'progress': 0.11, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 4.7963, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 3, 'progress': 0.17, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 3.5573, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 4, 'progress': 0.23, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 6.8981, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 5, 'progress': 0.29, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 3.8822, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 6, 'progress': 0.35, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 6.6972, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 7, 'progress': 0.41, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 3.0719, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 8, 'progress': 0.47, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 2.5454, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 9, 'progress': 0.52, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 2.944, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 10, 'progress': 0.58, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 2.9163, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 11, 'progress': 0.64, 'time_remaining': '00:00:00', 'time_total': '00:00:06', 'loss': 2.5531, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 12, 'progress': 0.7, 'time_remaining': '00:00:00', 'time_total': '00:00:06', 'loss': 2.1718, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 13, 'progress': 0.76, 'time_remaining': '23:59:59', 'time_total': '00:00:06', 'loss': 2.48, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 14, 'progress': 0.82, 'time_remaining': '23:59:59', 'time_total': '00:00:06', 'loss': 1.878, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 15, 'progress': 0.88, 'time_remaining': '23:59:59', 'time_total': '00:00:06', 'loss': 2.0353, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'iteration': 16, 'progress': 0.94, 'time_remaining': '23:59:58', 'time_total': '00:00:06', 'loss': 2.5595, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 0, 'batch_size': 16, 'lr': 0.001, 'train precision': 0.015625, 'train recall': 0.125, 'train f1': 0.027777777777777776, 'train accuracy': 0.125, 'valid_precision': 0.1758584807492196, 'valid_recall': 0.41935483870967744, 'valid_f1': '0.24', 'valid_accuracy': 0.41935483870967744}
+{'epoch': 1, 'iteration': 0, 'progress': 0.0, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 2.6556, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 1, 'progress': 0.05, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 2.5553, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 2, 'progress': 0.11, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 2.5773, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 3, 'progress': 0.17, 'time_remaining': '00:00:04', 'time_total': '00:00:06', 'loss': 2.1266, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 4, 'progress': 0.23, 'time_remaining': '00:00:04', 'time_total': '00:00:06', 'loss': 2.2436, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 5, 'progress': 0.29, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 1.7345, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 6, 'progress': 0.35, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 2.5606, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 7, 'progress': 0.41, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 2.064, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 8, 'progress': 0.47, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 2.5778, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 9, 'progress': 0.52, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 1.8097, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 10, 'progress': 0.58, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 2.3921, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 11, 'progress': 0.64, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 2.2877, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 12, 'progress': 0.7, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 2.6777, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 13, 'progress': 0.76, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 2.2531, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 14, 'progress': 0.82, 'time_remaining': '00:00:00', 'time_total': '00:00:06', 'loss': 1.6739, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 15, 'progress': 0.88, 'time_remaining': '00:00:00', 'time_total': '00:00:06', 'loss': 2.1822, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'iteration': 16, 'progress': 0.94, 'time_remaining': '00:00:00', 'time_total': '00:00:06', 'loss': 2.1531, 'batch_size': 16, 'lr': 0.001}
+{'epoch': 1, 'batch_size': 16, 'lr': 0.0001, 'train precision': 0.015625, 'train recall': 0.125, 'train f1': 0.027777777777777776, 'train accuracy': 0.125, 'valid_precision': 0.1996927803379416, 'valid_recall': 0.3225806451612903, 'valid_f1': '0.24', 'valid_accuracy': 0.3225806451612903}
+{'epoch': 2, 'iteration': 0, 'progress': 0.0, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 2.0903, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 1, 'progress': 0.05, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 1.7563, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 2, 'progress': 0.11, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 1.7705, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 3, 'progress': 0.17, 'time_remaining': '00:00:04', 'time_total': '00:00:06', 'loss': 1.9593, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 4, 'progress': 0.23, 'time_remaining': '00:00:04', 'time_total': '00:00:06', 'loss': 1.8952, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 5, 'progress': 0.29, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 1.9804, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 6, 'progress': 0.35, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 1.9565, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 7, 'progress': 0.41, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 2.3033, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 8, 'progress': 0.47, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 1.8687, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 9, 'progress': 0.52, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 2.0728, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 10, 'progress': 0.58, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 2.0699, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 11, 'progress': 0.64, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 1.9162, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 12, 'progress': 0.7, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 1.7273, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 13, 'progress': 0.76, 'time_remaining': '00:00:01', 'time_total': '00:00:06', 'loss': 1.9033, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 14, 'progress': 0.82, 'time_remaining': '00:00:00', 'time_total': '00:00:06', 'loss': 1.8649, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 15, 'progress': 0.88, 'time_remaining': '00:00:00', 'time_total': '00:00:06', 'loss': 1.7643, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'iteration': 16, 'progress': 0.94, 'time_remaining': '00:00:00', 'time_total': '00:00:06', 'loss': 1.7452, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 2, 'batch_size': 16, 'lr': 0.0001, 'train precision': 0.26666666666666666, 'train recall': 0.5, 'train f1': 0.3478260869565218, 'train accuracy': 0.5, 'valid_precision': 0.1758584807492196, 'valid_recall': 0.41935483870967744, 'valid_f1': '0.24', 'valid_accuracy': 0.41935483870967744}
+{'epoch': 3, 'iteration': 0, 'progress': 0.0, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 1.9476, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 1, 'progress': 0.05, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 1.8695, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 2, 'progress': 0.11, 'time_remaining': '00:00:05', 'time_total': '00:00:06', 'loss': 1.7554, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 3, 'progress': 0.17, 'time_remaining': '00:00:04', 'time_total': '00:00:06', 'loss': 1.6846, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 4, 'progress': 0.23, 'time_remaining': '00:00:04', 'time_total': '00:00:06', 'loss': 1.6549, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 5, 'progress': 0.29, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 1.9787, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 6, 'progress': 0.35, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 1.9837, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 7, 'progress': 0.41, 'time_remaining': '00:00:03', 'time_total': '00:00:06', 'loss': 1.7454, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 8, 'progress': 0.47, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 1.8131, 'batch_size': 16, 'lr': 0.0001}
+{'epoch': 3, 'iteration': 9, 'progress': 0.52, 'time_remaining': '00:00:02', 'time_total': '00:00:06', 'loss': 1.8586, 'batch_size': 16, 'lr': 0.0001}
