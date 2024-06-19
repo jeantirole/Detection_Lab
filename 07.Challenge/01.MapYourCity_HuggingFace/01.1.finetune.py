@@ -207,33 +207,3 @@ for epoch in range(cfg.EPOCHS):
     #-- model save 
     torch.save(model.state_dict(), os.path.join(cfg.SAVE_DIR, f"{cfg.RUN_VERSION}_{cfg.MODEL}_f1_{valid_f1}_epoch_{epoch}.pth"))
     
-
-
-# #---
-# # TESTING LOOP
-# model.eval()
-# test_loss = 0
-# with torch.no_grad():
-#     for data, target in test_loader:
-#         # NOTE: no need to call `.to(device)` on the data, target
-#         output = model(data)
-#         test_loss += F.nll_loss(output, target, reduction="sum").item()
-
-#         # WITHOUT TorchMetrics
-#         # pred = output.argmax(dim=1, keepdim=True)  # get the index of the max log-probability
-#         # correct += pred.eq(target.view_as(pred)).sum().item()
-
-#         # WITH TorchMetrics
-#         test_acc(output, target)
-
-#         if hparams.dry_run:
-#             break
-
-# # all_gather is used to aggregated the value across processes
-# test_loss = fabric.all_gather(test_loss).sum() / len(test_loader.dataset)
-
-# print(f"\nTest set: Average loss: {test_loss:.4f}, Accuracy: ({100 * test_acc.compute():.0f}%)\n")
-# test_acc.reset()
-# #---
-
-
