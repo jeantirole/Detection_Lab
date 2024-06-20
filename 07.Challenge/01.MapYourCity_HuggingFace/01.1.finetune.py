@@ -162,7 +162,7 @@ for epoch in range(cfg.EPOCHS):
         time_total = len(trainloader) * iter_time 
         time_remaining = time_total - accum_time
         
-        log_dict=   {
+        log_dict=   { 
             "epoch" : epoch,
             "iteration" : iteration,
             "progress" : float(str(iteration / len(trainloader))[0:4]),

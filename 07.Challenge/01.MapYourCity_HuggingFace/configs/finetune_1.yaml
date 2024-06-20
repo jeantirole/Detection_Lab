@@ -12,7 +12,7 @@ SAMPLE : False # Data sampling for test
 TIMM: True
 MODEL: eva_large_patch14_336.in22k_ft_in22k_in1k #VAN #eva_large_patch14_336.in22k_ft_in22k_in1k
 SAVE_DIR: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output
-RUN_VERSION : 9
+RUN_VERSION : 11
 
 VARIANT: L                  # specific model variants (check by running `python list_models.py`)
 PRETRAINED: '/mnt/hdd/eric/.tmp_ipy/00.Checkpoint/Map_City/van_large_839.pth.tar'
