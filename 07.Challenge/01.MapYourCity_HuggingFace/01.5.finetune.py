@@ -196,7 +196,7 @@ for epoch in range(cfg.EPOCHS):
     
     #-- evaluate validation
     valid_precision, valid_recall, valid_f1, valid_accuracy = map_train.test_v2(testloader, model, val_loss_fn,cfg,metric_obj)
-    valid_f1 = str(valid_f1)[0:4]
+    valid_f1 = str(valid_f1)[0:6]
     
     log_dict_test = {
     "epoch" : epoch,

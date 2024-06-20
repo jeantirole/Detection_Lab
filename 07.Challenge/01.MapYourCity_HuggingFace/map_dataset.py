@@ -215,6 +215,11 @@ class Map_Dataset_v2(torch.utils.data.Dataset):
 
 
 #--- dataset class 
+#
+# v2 => v3 
+# cfg.INTERPOLATION Option added 
+#
+#---
 class Map_Dataset_v3(torch.utils.data.Dataset):      
     def __init__(self, list_IDs,train_path, max_size, cfg): 
         self.list_IDs = list_IDs
