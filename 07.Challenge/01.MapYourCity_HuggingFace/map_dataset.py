@@ -413,3 +413,116 @@ class Map_Dataset_v4(torch.utils.data.Dataset):
         return X1, y 
     
     
+
+
+
+#--- dataset class
+# v4 => v5 
+# train / validation => augmentation or not 
+#--- 
+class Map_Dataset_v5(torch.utils.data.Dataset):      
+    def __init__(self, list_IDs,train_path, max_size, cfg, split): 
+        self.list_IDs = list_IDs
+        self.train_path = train_path
+        self.max_value = max_size
+        self.min_value = int(self.max_value* 2/3) # min : max = 2 :3
+        self.cfg = cfg
+        self.split = split
+    
+    def __len__(self):
+        return len(self.list_IDs)
+    
+    
+    def resize(self,img_):
+        if self.cfg.INTERPOLATION == "bilinear":
+            inter_ = torchvision.transforms.InterpolationMode.BICUBIC
+        elif self.cfg.INTERPOLATION == "bicubic":
+            inter_ = torchvision.transforms.InterpolationMode.BILINEAR
+        
+        resize_transform = torchvision.transforms.Resize(
+            size=self.min_value, max_size= self.max_value,
+             interpolation=inter_ 
+        )
+        img_ = resize_transform(img_)
+        return img_
+    
+    
+    def centercrop_normalize(self,img_):
+        torchvision_transform = torchvision.transforms.Compose([
+        
+        torchvision.transforms.CenterCrop(self.max_value),
+        torchvision.transforms.ToTensor(),
+        torchvision.transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))           
+        ])
+        
+        return torchvision_transform(img_)
+    
+    
+    def ratio_pad(self,img_da):
+        
+        max_value = self.max_value       
+        width_, height_ = img_da.size
+        # left top right bottom 
+        img_da = F.pad(img=img_da,padding=[(max_value-width_)//2+1, (max_value-height_)//2+1, (max_value-width_)//2+1,(max_value-height_)//2+1], padding_mode="constant", fill=0)    
+        #img_da = F.pad(img=img_da,padding=[0, max_value-height_, max_value-width_,0], padding_mode="constant", fill=0)
+        
+        return img_da
+    
+    
+    def augmentations(self,img):
+        
+        prob = 0.5
+        AUGMENTATIONS = {
+            "griddropout": lambda prob: A.OneOf([A.GridDropout(p=prob, holes_number_x=3, holes_number_y=4), A.GridDropout(p=prob)], p=prob),
+            "horizontalflip": lambda prob: A.HorizontalFlip(p=prob),
+            "gaussnoise": lambda prob: A.GaussNoise(p=prob)
+        }
+        
+        img = np.asarray(img)
+
+        # Create the list of transformations based on the configuration
+        transforms_list = [AUGMENTATIONS[aug](prob) for aug in self.cfg.AUGMENTATIONS]
+
+        # Compose the transformations
+        albumentations_transforms = A.Compose(transforms_list)
+        
+        # Apply the transforms
+        augmented = albumentations_transforms(image=img)
+        img = augmented['image']
+        
+        #-- topil
+        topil = torchvision.transforms.ToPILImage()
+        img = topil(img)
+        
+        return img
+        
+        
+    
+    def __getitem__(self, index): 
+        ID = self.list_IDs[index] 
+        X1 = Image.open(self.train_path + ID + '/street.jpg').convert('RGB')
+        
+        if self.split == 'train':
+            X1 = self.augmentations(X1)
+        elif self.split == 'valid':
+            pass
+        
+        X1 = self.resize(X1)
+        X1 = self.ratio_pad(X1)
+        X1 = self.centercrop_normalize(X1)
+        #X1 = cv2.resize(X1, (256, 256)) 
+        
+        #X2 = Image.open(self.train_path + ID + '/orthophoto.tif')  
+        #if self.transform:
+        #    X2 = self.transform(X2)
+        #X2 = cv2.resize(X2, (256, 256)) 
+        
+        
+        #X3 = rasterio.open(self.train_path + ID + '/s2_l2a.tif').read() 
+        #X3 = np.transpose(X3, [1, 2, 0]) 
+        #X3 = self.transform(X3)
+        
+        y = int(open(self.train_path + ID + '/label.txt', "r").read())
+        return X1, y 
+    
+    

@@ -120,3 +120,61 @@ def test_v2(dataloader, model, loss_fn,cfg, metric_object):
     
     
     return precision, recall, f1, accuracy
+
+
+#--------------------------------
+def test_v3(dataloader, model, loss_fn,cfg, metric_object):
+    '''
+    CE and Regression losses split 
+    '''
+    if cfg.LOSS_FN == "CE":
+        model.eval()
+        size = len(dataloader.dataset)
+        num_batches = len(dataloader)
+        test_loss, top1_acc, top5_acc = 0, 0, 0
+
+        predictions_ = []
+        labels_ = []
+        with torch.no_grad():
+            for X, y in dataloader:
+                
+                if not cfg.FABRIC:
+                    X, y = X.to(cfg.DEVICE), y.to(cfg.DEVICE)
+                pred = model(X)
+                
+                #--
+                predictions = torch.argmax(pred,-1)
+                predictions_.extend(predictions.cpu())
+                labels_.extend(y.cpu())
+                #--
+                test_loss += loss_fn(pred, y).item()
+                
+        #---    
+        precision, recall, f1, accuracy  = metric_object.classification_metrics(labels_,predictions_)
+        
+        
+        return precision, recall, f1, accuracy
+    
+    else:    
+        model.eval()
+        size = len(dataloader.dataset)
+        losses = 0
+        with torch.no_grad():
+            for X, y in dataloader:
+                
+                if not cfg.FABRIC:
+                    X, y = X.to(cfg.DEVICE), y.to(cfg.DEVICE)
+                pred = model(X)
+
+                #-- 
+                pred = pred.squeeze(-1)
+                pred = pred.to(torch.float32)
+                print("pred shape: ", pred.shape)
+                print(pred)
+                print("y shape: ", y.shape)
+                print(y)
+                y = y.to(torch.float32)
+                loss = loss_fn(pred, y)
+                losses += (loss)
+                #--
+        return losses / len(dataloader)        

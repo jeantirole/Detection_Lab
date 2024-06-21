@@ -1,0 +1,49 @@
+#--------------------- config v6 
+# => regression losses added
+#---------------------
+
+# Version 
+RUN_VERSION : 16
+
+# Single run 
+DEVICE: cuda:1
+
+# DDP                
+FABRIC: True
+DEVICES: [0,1,2,3]
+NUM_WORKERS: 8
+
+# SAMPLE
+SAMPLE : False # Data sampling for test 
+
+# MODEL
+TIMM: True
+MODEL: eva02_base_patch14_448.mim_in22k_ft_in22k_in1k #VAN #eva_large_patch14_336.in22k_ft_in22k_in1k
+SAVE_DIR: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output
+
+LOCAL: False
+VARIANT: L   # specific model variants (check by running `python list_models.py`)
+PRETRAINED: '/mnt/hdd/eric/.tmp_ipy/00.Checkpoint/Map_City/van_large_839.pth.tar'
+FREEZE: false   # freeze all layers except the last head
+
+
+# TRAIN
+LOSS_FN : MSE
+CLASSES_NUM : 1
+INTERPOLATION: bicubic
+EPOCHS: 15                   # number of epochs to train
+BATCH_SIZE: 8            # batch size to use
+EVAL_INTERVAL: 1            # evaluation interval
+AMP: False                  # Mixed Precision Training
+LR: 2.46374944022223E-05 # lr = (batch_size / 1024) * 1e-3
+DECAY: 0.005                # lr decay rate
+STEP_SIZE: 2
+GAMMA: 0.1
+
+# INFER
+IMAGE_SIZE: [376, 376]
+
+# AUGMENTATION
+AUGMENTATIONS: ["griddropout", "horizontalflip", "gaussnoise"]
+
+
