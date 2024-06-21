@@ -1121,6 +1121,14 @@ class Metric_Classification:
         self.sum += val * n
         self.count += n
         self.avg = self.sum / self.count
+
+    def regression_metrics(self,labels_, predictions_):
+        mae = nn.L1Loss()
+        mse = nn.MSELoss()
+        mse_losses = mse(labels_,predictions_)
+        mae_losses = mae(labels_,predictions_)
+        
+        return mse_losses, mae_losses
         
     def classification_metrics(self, labels_, predictions_):
         precision, recall, f1, _ = precision_recall_fscore_support(labels_, predictions_, average='weighted')

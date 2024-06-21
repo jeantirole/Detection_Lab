@@ -13,6 +13,10 @@
 *.tar
 *.log
 *.wandb
+*.pyc
+*.out
 00.Data
+/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/logs
 /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/01.Models/04.SAM_fine/wandb
+/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/wandb
 README.md
