@@ -568,22 +568,25 @@ class Map_Dataset_v7(torch.utils.data.Dataset):
     '''
     v6 => v7
     - sentienl photo pipe added
+    - submission test pipe
+    - test mode "top_view_only" added 
     
     
     v5 => v6 
     - topview photo pipe added  
     - topview resize function 
-    - normalize pipe 
+    - normalize pipe
 
     '''      
     
-    def __init__(self, list_IDs,train_path, max_size, cfg, split): 
+    def __init__(self, list_IDs,train_path, max_size, cfg, split,test_mode=None): 
         self.list_IDs = list_IDs
         self.train_path = train_path
         self.max_value = max_size
         self.min_value = int(self.max_value* 2/3) # min : max = 2 :3
         self.cfg = cfg
         self.split = split
+        self.test_mode = test_mode
     
     def __len__(self):
         return len(self.list_IDs)
@@ -685,7 +688,11 @@ class Map_Dataset_v7(torch.utils.data.Dataset):
         ID = self.list_IDs[index] 
         
         # X1 ---------------------------------------------
-        X1 = Image.open(self.train_path + ID + '/street.jpg').convert('RGB')
+        if self.test_mode == None:
+            X1 = Image.open(self.train_path + ID + '/street.jpg').convert('RGB')
+        elif self.test_mode == "top_view_only":
+            X1 = Image.open(self.train_path + ID + '/orthophoto.tif')
+
         if self.split == 'train':
             X1 = self.augmentations(X1)
         elif self.split == 'valid':
@@ -712,8 +719,9 @@ class Map_Dataset_v7(torch.utils.data.Dataset):
         # X3 = self.resize_topview(X3)
         # X3 = self.normalize(X3)
         
-        y = int(open(self.train_path + ID + '/label.txt', "r").read())
-        
-        return X1, X2, X3, y 
-    
+        if self.split == "train" or self.split == "valid":  
+            y = int(open(self.train_path + ID + '/label.txt', "r").read())
+            return X1, X2, X3, y
+        else:
+            return X1, X2, X3
     

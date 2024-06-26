@@ -1137,4 +1137,26 @@ class Metric_Classification:
         return precision, recall, f1, accuracy 
     
     
-    
+#--- Label Distribution for pdf 
+
+def pdf_fn(x):
+  '''
+  x to pdf distribution 
+  '''
+  x_pdf = torch.exp( -(x)**2 /2  ) * 1/( torch.pi * torch.sqrt(torch.tensor(2)) )
+  return x_pdf
+
+
+def label_to_dist(label):
+  '''
+  - int label [0,1,0,0,0]
+  - distrbuted label = [1,0,1,2,3]
+  int label will be distributed by a interval "gap_" variable below 
+  need to update gap_=> 0.05 interval
+ 
+  '''
+
+  gap_ = 1
+  target_label_index = torch.where(label==1)[0][0].detach().cpu().numpy()
+  label_dist = [i for i in np.arange(target_label_index,0,-gap_)] + [i for i in np.arange(0,len(label) - target_label_index,gap_ )]
+  return label_dist
