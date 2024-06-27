@@ -1,0 +1,28 @@
+{'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+Compose(
+    Resize(size=(448, 448), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(448, 448))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)
+{'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+Compose(
+    Resize(size=(448, 448), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(448, 448))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)
+{'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+Compose(
+    Resize(size=(448, 448), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(448, 448))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)
+{'input_size': (3, 448, 448), 'interpolation': 'bicubic', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'crop_pct': 1.0, 'crop_mode': 'squash'}
+Compose(
+    Resize(size=(448, 448), interpolation=bicubic, max_size=None, antialias=warn)
+    CenterCrop(size=(448, 448))
+    ToTensor()
+    Normalize(mean=tensor([0.4815, 0.4578, 0.4082]), std=tensor([0.2686, 0.2613, 0.2758]))
+)

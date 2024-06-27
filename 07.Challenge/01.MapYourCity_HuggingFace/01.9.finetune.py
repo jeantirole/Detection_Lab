@@ -3,6 +3,7 @@
 patch note 01.9
 1. Label => Distribution
 "label_deviation" hyperparam added
+2. Parallel train for KL div 
 
 patch note 01.8 
 
@@ -53,7 +54,7 @@ from rich.console import Console
 
 #--- argparser
 parser = argparse.ArgumentParser()
-parser.add_argument('--cfg', type=str, default='./configs/finetune_9.yaml')
+parser.add_argument('--cfg', type=str, default='./configs/finetune_10.yaml')
 args = parser.parse_args()
 cfg = argparse.Namespace(**yaml.load(open(args.cfg), Loader=yaml.SafeLoader))
 
@@ -187,8 +188,10 @@ for epoch in range(cfg.EPOCHS):
             # label 
             labels_for_metric = labels.detach().cpu().clone()
             labels = torch.nn.functional.one_hot(labels,num_classes=7)
-            label_deviation = 2 
-            labels = torch.tensor([RS_utils.label_to_dist(la) for la in labels]/ label_deviation, dtype=torch.float32)
+             
+            labels = torch.tensor([RS_utils.label_to_dist(la) for la in labels], dtype=torch.float32)
+            label_deviation = 2.0
+            labels = labels * label_deviation 
             labels = RS_utils.pdf_fn(labels)
             #-- normalize divide by sum 
             # # Compute the mean of each row
@@ -197,7 +200,7 @@ for epoch in range(cfg.EPOCHS):
             labels = labels / row_sum
 
             #-- delete should be 
-            labels = labels.to(cfg.DEVICE)
+            #labels = labels.to(cfg.DEVICE)
             
             #--
             #print("pred : ",pred)
