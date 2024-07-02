@@ -1136,7 +1136,173 @@ class Metric_Classification:
         
         return precision, recall, f1, accuracy 
     
+
+class Metric_Classification_Valid:
+    '''
+    Classification Class to Singleton Pattern
     
+    '''
+
+    __shared_state = {"precision" :[],
+                      "recall" :[],
+                      "f1" :[],
+                      "accuracy":[]}
+    def __init__(self):
+        self.__dict__ = self.__shared_state
+
+    def reset(self):
+        self.val = 0
+        self.avg = 0
+        self.sum = 0
+        self.count = 0
+
+    def update(self, val, n=1):
+        self.val = val
+        self.sum += val * n
+        self.count += n
+        self.avg = self.sum / self.count
+
+    def regression_metrics(self,labels_, predictions_):
+        mae = nn.L1Loss()
+        mse = nn.MSELoss()
+        mse_losses = mse(labels_,predictions_)
+        mae_losses = mae(labels_,predictions_)
+        
+        return mse_losses, mae_losses
+        
+    def classification_metrics(self, labels_, predictions_):
+        precision, recall, f1, _ = precision_recall_fscore_support(labels_, predictions_, average='weighted')
+        accuracy = accuracy_score(labels_, predictions_)
+        
+        self.__dict__["precision"].append(precision)
+        self.__dict__["recall"].append(recall)
+        self.__dict__["f1"].append(f1)
+        self.__dict__["accuracy"].append(accuracy)
+        
+
+        #return precision, recall, f1, accuracy 
+
+
+class Metric_Classification_Train:
+    '''
+    Classification Class to Singleton Pattern
+    
+    '''
+
+    __shared_state = {"precision" :[],
+                      "recall" :[],
+                      "f1" :[],
+                      "accuracy":[]}
+    def __init__(self):
+        self.__dict__ = self.__shared_state
+
+
+    def regression_metrics(self,labels_, predictions_):
+        mae = nn.L1Loss()
+        mse = nn.MSELoss()
+        mse_losses = mse(labels_,predictions_)
+        mae_losses = mae(labels_,predictions_)
+        
+        return mse_losses, mae_losses
+        
+    def classification_metrics(self, labels_, predictions_):
+        precision, recall, f1, _ = precision_recall_fscore_support(labels_, predictions_, average='weighted')
+        accuracy = accuracy_score(labels_, predictions_)
+        
+        self.__dict__["precision"].append(precision)
+        self.__dict__["recall"].append(recall)
+        self.__dict__["f1"].append(f1)
+        self.__dict__["accuracy"].append(accuracy)
+
+
+#--- 
+import threading
+
+class Singleton:
+    _instance = None
+    _lock = threading.Lock()
+    _data = {
+        "a" :[]
+    }
+
+    def __new__(cls):
+        if cls._instance is None:
+            with cls._lock:
+                if cls._instance is None:
+                    cls._instance = super(Singleton, cls).__new__(cls)
+        return cls._instance
+
+
+#-- class lazy for SingleTon 
+# class LazyInstantiation:
+class Metric_Train:
+    _instance = None
+    _lock = threading.Lock()
+    _shared_state = {"precision" :[],
+                      "recall" :[],
+                      "f1" :[],
+                      "accuracy":[]}
+    def __new__(cls):
+        if cls._instance is None:
+            with cls._lock:
+                if cls._instance is None:
+                    cls._instance = super(Metric_Train, cls).__new__(cls)
+        return cls._instance
+ 
+    @classmethod
+    def getInstance(cls):
+        if not cls._instance:
+            cls._instance = Metric_Train()
+        return cls._instance
+ 
+    def data_update(self,v):
+        self._shared_state["a"] += v
+
+    def eval_classification(self, labels_, predictions_):
+        precision, recall, f1, _ = precision_recall_fscore_support(labels_, predictions_, average='weighted')
+        accuracy = accuracy_score(labels_, predictions_)
+        
+        self._shared_state["precision"].append(precision)
+        self._shared_state["recall"].append(recall)
+        self._shared_state["f1"].append(f1)
+        self._shared_state["accuracy"].append(accuracy)
+
+        return precision, recall, f1, accuracy
+
+class Metric_Valid:
+    _instance = None
+    _lock = threading.Lock()
+    _shared_state = {"precision" :[],
+                      "recall" :[],
+                      "f1" :[],
+                      "accuracy":[]}
+    def __new__(cls):
+        if cls._instance is None:
+            with cls._lock:
+                if cls._instance is None:
+                    cls._instance = super(Metric_Valid, cls).__new__(cls)
+        return cls._instance
+ 
+    @classmethod
+    def getInstance(cls):
+        if not cls._instance:
+            cls._instance = Metric_Valid()
+        return cls._instance
+ 
+    def data_update(self,v):
+        self._shared_state["a"] += v
+
+    def eval_classification(self, labels_, predictions_):
+        precision, recall, f1, _ = precision_recall_fscore_support(labels_, predictions_, average='weighted')
+        accuracy = accuracy_score(labels_, predictions_)
+        
+        self._shared_state["precision"].append(precision)
+        self._shared_state["recall"].append(recall)
+        self._shared_state["f1"].append(f1)
+        self._shared_state["accuracy"].append(accuracy)
+
+        return precision, recall, f1, accuracy
+
 #--- Label Distribution for pdf 
 
 def pdf_fn(x):
@@ -1159,4 +1325,30 @@ def label_to_dist(label):
   gap_ = 1
   target_label_index = torch.where(label==1)[0][0].detach().cpu().numpy()
   label_dist = [i for i in np.arange(target_label_index,0,-gap_)] + [i for i in np.arange(0,len(label) - target_label_index,gap_ )]
+  return label_dist
+
+
+
+
+def label_to_dist_torch(label):
+  '''
+  patch note 
+  label_to_dist => label_to_dist_torch
+  make label to dist function can work with torch 
+  
+  - int label [0,1,0,0,0]
+  - distrbuted label = [1,0,1,2,3]
+  int label will be distributed by a interval "gap_" variable below 
+  need to update gap_=> 0.05 interval
+ 
+  '''
+
+  gap_ = 1
+  #target_label_index = torch.where(label == 1)[0][0]
+  #label_dist = list(range(target_label_index, 0, -gap_)) + list(range(0, len(label) - target_label_index, gap_))
+  target_label_index = torch.where(label==1)[0][0]
+  label_dist = [i for i in np.arange(target_label_index,0,-gap_)] + [i for i in np.arange(0,len(label) - target_label_index,gap_ )]
+  label_dist = torch.tensor(label_dist)
+  
+  
   return label_dist

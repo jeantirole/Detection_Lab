@@ -1,0 +1,2950 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.18
+    cli_version: 0.16.6
+    framework: huggingface
+    huggingface_version: 4.41.2
+    is_jupyter_run: false
+    is_kaggle_kernel: true
+    start_time: 1719827567.0
+    t:
+      1:
+      - 1
+      - 5
+      - 11
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      - 74
+      - 80
+      2:
+      - 1
+      - 5
+      - 11
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      - 74
+      - 80
+      3:
+      - 1
+      - 7
+      - 23
+      - 60
+      - 62
+      4: 3.8.18
+      5: 0.16.6
+      6: 4.41.2
+      8:
+      - 2
+      - 5
+      9:
+        2: lightning_fabric_logger
+      13: linux-x86_64
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+    - 1: epoch
+      5: 1
+      6:
+      - 1
+    - 1: iteration
+      5: 1
+      6:
+      - 1
+    - 1: progress
+      5: 1
+      6:
+      - 1
+    - 1: time_remaining
+      5: 1
+      6:
+      - 1
+    - 1: time_total
+      5: 1
+      6:
+      - 1
+    - 1: loss
+      5: 1
+      6:
+      - 1
+    - 1: batch_size
+      5: 1
+      6:
+      - 1
+    - 1: lr
+      5: 1
+      6:
+      - 1
+    - 1: train precision
+      5: 1
+      6:
+      - 1
+    - 1: train recall
+      5: 1
+      6:
+      - 1
+    - 1: train f1
+      5: 1
+      6:
+      - 1
+    - 1: train accuracy
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.head\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.head\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.head\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.head\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.head\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.head\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.fc_norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.fc_norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.fc_norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.fc_norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.fc_norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.fc_norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.11\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.10\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.9\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.8\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.7\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.6\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.5\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.4\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.3\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.2\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.1\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.norm\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.norm\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.norm\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.norm\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.norm\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.norm\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_x\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_x\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_x\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_x\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_x\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_x\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_g\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_g\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_g\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_g\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_g\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.mlp\.fc1_g\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm2\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm2\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm2\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm2\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm2\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm2\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.v_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.v_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.v_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.v_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.v_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.v_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.k_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.k_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.k_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.q_proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.q_proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.q_proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.q_proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.q_proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.attn\.q_proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm1\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm1\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm1\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm1\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm1\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.blocks\.0\.norm1\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.pos_embed._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.pos_embed.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.pos_embed.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.cls_token._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.cls_token.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.cls_token.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.patch_embed\.proj\.weight._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.patch_embed\.proj\.weight.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.patch_embed\.proj\.weight.bins
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.patch_embed\.proj\.bias._type
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.patch_embed\.proj\.bias.values
+      5: 1
+      6:
+      - 1
+    - 1: gradients/_forward_module\.module\.patch_embed\.proj\.bias.bins
+      5: 1
+      6:
+      - 1
+    - 1: valid_precision
+      5: 1
+      6:
+      - 1
+    - 1: valid_recall
+      5: 1
+      6:
+      - 1
+    - 1: valid_f1
+      5: 1
+      6:
+      - 1
+    - 1: valid_accuracy
+      5: 1
+      6:
+      - 1

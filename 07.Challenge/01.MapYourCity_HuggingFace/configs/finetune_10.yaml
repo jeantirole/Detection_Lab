@@ -1,5 +1,5 @@
-#--------------------- config v9 
-# => Label pdf and KL Div Loss
+#--------------------- config v10
+# => cfg.label_deviation added
 #---------------------
 
 # Version 
@@ -9,7 +9,7 @@ RUN_VERSION : 20
 DATA_TYPE : topview
 
 # DDP                
-FABRIC: True
+FABRIC: False
 DEVICES: [0,1,2,3]
 NUM_WORKERS: 8
 
@@ -39,4 +39,5 @@ IMAGE_SIZE: [376, 376]
 # AUGMENTATION
 AUGMENTATIONS: ["griddropout", "horizontalflip", "gaussnoise"]
 
-
+# LABEL Distribution
+LABEL_DEVIATION : 2 

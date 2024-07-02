@@ -1,6 +1,7 @@
 '''
 02.2 
-model layer no freezing 
+model layer no freezing
+KL Loss added 
 
 
 '''
@@ -52,10 +53,10 @@ inference_dict ={
 }
 
 #--- argparser
-cfgs_names = ['finetune_5.yaml', 'finetune_8.yaml']
+cfgs_names = ['finetune_12.yaml','finetune_11.yaml']
 for cfg_name in cfgs_names:    
     parser = argparse.ArgumentParser()
-    parser.add_argument('--cfg', type=str, default=os.path.join('./configs', cfg_name))
+    parser.add_argument('--cfg', type=str, default=os.path.join('/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/configs', cfg_name))
     args = parser.parse_args(args=[])
     cfg = argparse.Namespace(**yaml.load(open(args.cfg), Loader=yaml.SafeLoader))
     inference_dict['cfgs'].append(cfg)
@@ -103,14 +104,17 @@ for cfg in inference_dict['cfgs']:
     print(" Model Name : ",cfg.MODEL)
 
 ckpt_paths = [
-            "/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output/15_eva02_base_patch14_448.mim_in22k_ft_in22k_in1k_f1_0.65_epoch_8.pth",
-            "/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output/18_eva02_base_patch14_448.mim_in22k_ft_in22k_in1k_f1_0.7226_epoch_5.pth" ]
+            "/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output/22_eva02_base_patch14_448.mim_in22k_ft_in22k_in1k_streetview_KL_f1_0.7059_epoch_23.pth",
+            "/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output/21_eva02_base_patch14_448.mim_in22k_ft_in22k_in1k_KL_f1_0.7206_epoch_19.pth",]
 
 for i,model in enumerate(inference_dict['models']):
     model.load_state_dict(torch.load(ckpt_paths[i]))
 
-train_set = map_dataset.Map_Dataset_v7(names_train,train_path,max_size=data_config['input_size'][1],cfg=cfg,split="train") 
-valid_set = map_dataset.Map_Dataset_v7(names_valid,train_path,max_size=data_config['input_size'][1],cfg=cfg,split="valid")  
+#train_set = map_dataset.Map_Dataset_v7(names_train,train_path,max_size=data_config['input_size'][1],cfg=cfg,split="train") 
+#valid_set = map_dataset.Map_Dataset_v7(names_valid,train_path,max_size=data_config['input_size'][1],cfg=cfg,split="valid")  
+
+train_set = map_dataset.Map_Dataset_v9(names_train,train_path,max_size=data_config['input_size'][1],cfg=cfg,split="train") 
+valid_set = map_dataset.Map_Dataset_v9(names_valid,train_path,max_size=data_config['input_size'][1],cfg=cfg,split="valid")  
 
 
 import torch.nn as nn 
@@ -131,8 +135,8 @@ class EnsembleModel(nn.Module):
     def forward(self, x1, x2):
         x1 = self.modelA(x1)
         x2 = self.modelB(x2)
-        # dim =1 -> dim =-1 
-        out = torch.cat( (x1, x2), dim=-1)
+        # dim =1 -> is better
+        out = torch.cat( (x1, x2), dim=1)
         out = self.classifier(out)
         return out
     
@@ -169,6 +173,10 @@ elif cfg.LOSS_FN =="CE":
     train_loss_fn = CrossEntropyLoss() 
     val_loss_fn = CrossEntropyLoss()
 
+elif cfg.LOSS_FN =="KL":
+    train_loss_fn = torch.nn.KLDivLoss(reduction='batchmean') 
+    val_loss_fn = torch.nn.KLDivLoss(reduction='batchmean')
+
 
 optimizer = AdamW(model.parameters(), cfg.LR, betas=(0.9, 0.999), eps=1e-8, weight_decay=1e-2)
 
@@ -181,7 +189,7 @@ wandb.init(project='MapYourCity')
 model1 = inference_dict['cfgs'][0].RUN_VERSION
 model2 = inference_dict['cfgs'][1].RUN_VERSION
 
-ensemble_version = 2
+ensemble_version = 1
 wandb.run.name = f'Ensemble_Model_{model1}_{model2}_v{ensemble_version}'
 wandb.run.save()
 
@@ -189,23 +197,31 @@ print("ensemble version : ",ensemble_version)
 print("model 1 :",model1)
 print("model 2 :",model2)
 
-cfg.FABRIC
-print(cfg.FABRIC)
-
-cfg.FABRIC = False
-print(cfg.FABRIC)
-
 #--- init fabric
+
+cfg.FABRIC = True
+print("fabric : ", cfg.FABRIC)
+
+
 if cfg.FABRIC: 
     fabric = Fabric(accelerator="cuda", devices=cfg.DEVICES, strategy="ddp")
     fabric.launch()
+
+
+if cfg.FABRIC:
+    model, optimizer = fabric.setup(model, optimizer)
+    trainloader,testloader = fabric.setup_dataloaders(trainloader,testloader)
+else:
+    model = model.to(cfg.DEVICE)
+
+
 
 
 for epoch in range(cfg.EPOCHS):
     
     accum_time = 0
     # Train 
-    for iteration, (str_imgs,top_imgs, _ ,labels) in enumerate(trainloader):
+    for iteration, (str_imgs,top_imgs, _ ,labels,dist_labels) in enumerate(trainloader):
         
         iter_start = time.time()
         
@@ -225,6 +241,11 @@ for epoch in range(cfg.EPOCHS):
             loss = train_loss_fn(pred, labels)
         elif cfg.LOSS_FN =="CE":  
             loss = train_loss_fn(pred, labels)
+        elif cfg.LOSS_FN =="KL":
+            # pred
+            pred = torch.nn.functional.softmax(pred, dim=1)
+            loss = train_loss_fn(pred.log(), labels)
+
         
         if cfg.FABRIC:
             fabric.backward(loss)
@@ -259,14 +280,20 @@ for epoch in range(cfg.EPOCHS):
 
     # Evaluation Metric
 
-    if cfg.LOSS_FN == "CE":
+    if cfg.LOSS_FN == "CE" or "KL":
         #-- evaluate last training batch
         predictions = torch.argmax(pred, -1).cpu()
+        if cfg.LOSS_FN == "KL":
+            dist_labels = dist_labels.detach().cpu()
+            labels = dist_labels
         labels = labels.cpu()
         train_precision, train_recall, train_f1, train_accuracy  = metric_obj.classification_metrics(labels,predictions)
         
         #-- evaluate validation
-        valid_precision, valid_recall, valid_f1, valid_accuracy = map_train.test_v5(testloader, model, val_loss_fn,cfg,metric_obj)
+        #--- this should be fixed
+        cfg.DATA_TYPE = "ensemble"
+        #---
+        valid_precision, valid_recall, valid_f1, valid_accuracy = map_train.test_v4_3(testloader, model, val_loss_fn,cfg,metric_obj)
         valid_f1 = str(valid_f1)[0:6]
 
         log_dict_test = {
@@ -304,5 +331,5 @@ for epoch in range(cfg.EPOCHS):
     if cfg.LOSS_FN=="MSE" or cfg.LOSS_FN=="MAE":
         torch.save(model.state_dict(), os.path.join(cfg.SAVE_DIR, f"{cfg.RUN_VERSION}_{cfg.MODEL}_{cfg.LOSS_FN}_{regression_loss}_epoch_{epoch}.pth")) 
     else:
-        torch.save(model.state_dict(), os.path.join(cfg.SAVE_DIR, f"{ensemble_version}_Ensemble_Model_{model1}_{model2}_f1_{valid_f1}_epoch_{epoch}.pth"))
+        torch.save(model.state_dict(), os.path.join(cfg.SAVE_DIR, f"Ensemble_Model_{ensemble_version}_{model1}_{model2}_f1_{valid_f1}_epoch_{epoch}.pth"))
     

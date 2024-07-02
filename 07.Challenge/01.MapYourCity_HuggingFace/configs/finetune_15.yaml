@@ -1,0 +1,47 @@
+#--------------------- config v10
+# => cfg.label_deviation added
+#---------------------
+
+
+#-------------------------------- This is Test Configuration
+# Version 
+RUN_VERSION : 27
+
+# Data Type 
+DATA_TYPE : streetview
+
+# DDP                
+FABRIC: True
+DEVICES: [0,1,2,3]
+NUM_WORKERS: 8
+
+# Single run 
+DEVICE: cuda:0
+
+# SAMPLE
+SAMPLE : False # Data sampling for test 
+SAMPLE_PERCENT : 0.2
+
+
+# MODEL
+TIMM: True
+MODEL: eva02_base_patch14_448.mim_in22k_ft_in22k_in1k #VAN #eva_large_patch14_336.in22k_ft_in22k_in1k
+SAVE_DIR: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output
+
+# TRAIN
+LOSS_FN : KL
+CLASSES_NUM : 7
+INTERPOLATION: bicubic
+EPOCHS: 30                   # number of epochs to train
+BATCH_SIZE: 8            # batch size to use
+EVAL_INTERVAL: 1            # evaluation interval
+LR: 2.46374944022223E-05 # lr = (batch_size / 1024) * 1e-3
+
+# INFER
+IMAGE_SIZE: [376, 376]
+
+# AUGMENTATION
+AUGMENTATIONS: ["griddropout", "horizontalflip", "verticalFlip", "blur", "gaussnoise"]
+
+# LABEL Distribution
+LABEL_DEVIATION : 2 
