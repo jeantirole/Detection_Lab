@@ -73,7 +73,7 @@ from wandb.integration.lightning.fabric import WandbLogger
 #--- argparser
 parser = argparse.ArgumentParser()
 parser.add_argument('--cfg', type=str, \
-                    default='/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/configs/finetune_17.yaml')
+                    default='/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/configs/finetune_19.yaml')
 args = parser.parse_args()
 cfg = argparse.Namespace(**yaml.load(open(args.cfg), Loader=yaml.SafeLoader))
 
@@ -170,7 +170,11 @@ for epoch in range(cfg.EPOCHS):
         
         iter_start = time.time()
         
-        imgs = str_imgs
+        if cfg.DATA_TYPE == "streetview":
+            imgs = str_imgs
+        elif cfg.DATA_TYPE == "topview":
+            imgs = top_imgs
+        
         if not cfg.FABRIC:
             imgs = imgs.to(cfg.DEVICE)
             labels = labels.to(cfg.DEVICE)
