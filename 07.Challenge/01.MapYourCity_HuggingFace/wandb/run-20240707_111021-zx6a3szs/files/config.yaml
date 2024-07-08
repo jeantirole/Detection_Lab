@@ -87,6 +87,38 @@ _wandb:
       5: 1
       6:
       - 1
+    - 1: train precision
+      5: 1
+      6:
+      - 1
+    - 1: train recall
+      5: 1
+      6:
+      - 1
+    - 1: train f1
+      5: 1
+      6:
+      - 1
+    - 1: train accuracy
+      5: 1
+      6:
+      - 1
+    - 1: valid_precision
+      5: 1
+      6:
+      - 1
+    - 1: valid_recall
+      5: 1
+      6:
+      - 1
+    - 1: valid_f1
+      5: 1
+      6:
+      - 1
+    - 1: valid_accuracy
+      5: 1
+      6:
+      - 1
 RUN_VERSION:
   desc: null
   value: 42

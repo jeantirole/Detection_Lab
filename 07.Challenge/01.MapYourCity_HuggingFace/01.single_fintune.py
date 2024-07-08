@@ -59,7 +59,7 @@ from wandb.integration.lightning.fabric import WandbLogger
 #--- argparser
 parser = argparse.ArgumentParser()
 config_root = "/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/configs"
-yaml_ = "finetune_27.yaml"
+yaml_ = "finetune_28.yaml"
 parser.add_argument('--cfg', type=str, \
                     default=os.path.join(config_root,yaml_))
 args = parser.parse_args()
