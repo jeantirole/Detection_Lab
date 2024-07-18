@@ -1,0 +1,212 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.8.18
+    cli_version: 0.16.6
+    framework: huggingface
+    huggingface_version: 4.41.2
+    is_jupyter_run: false
+    is_kaggle_kernel: true
+    start_time: 1720421672.0
+    t:
+      1:
+      - 1
+      - 5
+      - 11
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      - 74
+      - 80
+      2:
+      - 1
+      - 5
+      - 11
+      - 41
+      - 49
+      - 53
+      - 55
+      - 63
+      - 74
+      - 80
+      3:
+      - 7
+      - 13
+      - 23
+      - 60
+      4: 3.8.18
+      5: 0.16.6
+      6: 4.41.2
+      8:
+      - 2
+      - 5
+      9:
+        2: lightning_fabric_logger
+      13: linux-x86_64
+    m:
+    - 1: trainer/global_step
+      6:
+      - 3
+    - 1: fold
+      5: 1
+      6:
+      - 1
+    - 1: epoch
+      5: 1
+      6:
+      - 1
+    - 1: iteration
+      5: 1
+      6:
+      - 1
+    - 1: progress
+      5: 1
+      6:
+      - 1
+    - 1: time_remaining
+      5: 1
+      6:
+      - 1
+    - 1: time_total
+      5: 1
+      6:
+      - 1
+    - 1: loss
+      5: 1
+      6:
+      - 1
+    - 1: batch_size
+      5: 1
+      6:
+      - 1
+    - 1: lr
+      5: 1
+      6:
+      - 1
+    - 1: train precision
+      5: 1
+      6:
+      - 1
+    - 1: train recall
+      5: 1
+      6:
+      - 1
+    - 1: train f1
+      5: 1
+      6:
+      - 1
+    - 1: train accuracy
+      5: 1
+      6:
+      - 1
+    - 1: valid_precision
+      5: 1
+      6:
+      - 1
+    - 1: valid_recall
+      5: 1
+      6:
+      - 1
+    - 1: valid_f1
+      5: 1
+      6:
+      - 1
+    - 1: valid_accuracy
+      5: 1
+      6:
+      - 1
+RUN_VERSION:
+  desc: null
+  value: 44
+DATA_TYPE:
+  desc: null
+  value: streetview
+N_SPLIT:
+  desc: null
+  value: 5
+RANDOM_STATE:
+  desc: null
+  value: 99
+FABRIC:
+  desc: null
+  value: true
+DEVICES:
+  desc: null
+  value:
+  - 0
+  - 1
+  - 2
+  - 3
+NUM_WORKERS:
+  desc: null
+  value: 8
+DEVICE:
+  desc: null
+  value: cuda:0
+SAMPLE:
+  desc: null
+  value: false
+SAMPLE_PERCENT:
+  desc: null
+  value: 0.01
+MODEL_SAVE:
+  desc: null
+  value: true
+TIMM:
+  desc: null
+  value: true
+MODEL:
+  desc: null
+  value: beit_large_patch16_512.in22k_ft_in22k_in1k
+SAVE_DIR:
+  desc: null
+  value: /mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/output
+LOSS_FN:
+  desc: null
+  value: CE
+LABEL_SMOOTHING:
+  desc: null
+  value: true
+OPTIMIZER:
+  desc: null
+  value: AdamW
+SCHEDULER:
+  desc: null
+  value: CosineAnnealingWarmRestarts
+CLASSES_NUM:
+  desc: null
+  value: 7
+INTERPOLATION:
+  desc: null
+  value: bicubic
+EPOCHS:
+  desc: null
+  value: 8
+LEARNING_RATE_CYCLE:
+  desc: null
+  value: 4
+BATCH_SIZE:
+  desc: null
+  value: 4
+EVAL_INTERVAL:
+  desc: null
+  value: 1
+LR:
+  desc: null
+  value: 2.5e-05
+AUGMENTATIONS_albumentation:
+  desc: null
+  value: false
+AUGMENTATIONS:
+  desc: null
+  value: trivial
+AUGMENTATIONS_torchvision:
+  desc: null
+  value: true
+LABEL_DEVIATION:
+  desc: null
+  value: 2

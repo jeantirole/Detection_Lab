@@ -390,3 +390,29 @@ def torchvision_fasterrcnn(weights_='COCO_V2'):
     #model.roi_heads.box_predictor = FastRCNNPredictor(in_features, num_classes)
 
     return model
+
+
+
+#-----
+class EnsembleModel(nn.Module):
+
+    '''
+    - 3 models will be ensembled
+
+    '''
+
+    def __init__(self, modelA, modelB, modelC):
+        super().__init__()
+        self.modelA = modelA
+        self.modelB = modelB
+        self.modelC = modelC
+        self.classifier = nn.Linear(7 * 3, 7)
+        
+    def forward(self, x1, x2, x3):
+        x1 = self.modelA(x1)
+        x2 = self.modelB(x2)
+        x3 = self.modelC(x3)
+        out = torch.cat( (x1, x2, x3), dim=1)
+        out = self.classifier(out)
+        return out
+    

@@ -59,7 +59,7 @@ from wandb.integration.lightning.fabric import WandbLogger
 #--- argparser
 parser = argparse.ArgumentParser()
 config_root = "/mnt/hdd/eric/.tmp_ipy/15.Lab_Detection/07.Challenge/01.MapYourCity_HuggingFace/configs"
-yaml_ = "finetune_28.yaml"
+yaml_ = "finetune_29.yaml"
 parser.add_argument('--cfg', type=str, \
                     default=os.path.join(config_root,yaml_))
 args = parser.parse_args()
@@ -133,8 +133,8 @@ for fold, (train_ids, valid_ids) in enumerate(SKF.split(names_data,names_label))
     
     #--- train and valid selection need
     train_set = map_dataset.Map_Dataset_v14(train_names,train_path,max_size=data_config['input_size'][1],cfg=cfg,split='train') 
-    valid_set = map_dataset.Map_Dataset_v14(valid_names,train_path,max_size=data_config['input_size'][1],cfg=cfg,split='valid')  
-
+    valid_set = map_dataset.Map_Dataset_v14(valid_names,train_path,max_size=data_config['input_size'][1],cfg=cfg,split='valid')
+    
     #--- dataloader 
     trainloader = DataLoader(train_set, cfg.BATCH_SIZE, shuffle=True, num_workers=cfg.NUM_WORKERS, pin_memory=True, drop_last=True)
     testloader = DataLoader(valid_set, cfg.BATCH_SIZE, num_workers=cfg.NUM_WORKERS, pin_memory=True) 

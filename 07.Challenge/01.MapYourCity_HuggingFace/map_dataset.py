@@ -2026,3 +2026,6 @@ class Map_Dataset_v14(torch.utils.data.Dataset):
             
         else:
             return X1, X2, X3
+        
+        
+#----
