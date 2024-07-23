@@ -1,0 +1,3 @@
+[submodule "09.Docker/mmrotate"]
+	path = 09.Docker/mmrotate
+	url = https://github.com/open-mmlab/mmrotate.git
