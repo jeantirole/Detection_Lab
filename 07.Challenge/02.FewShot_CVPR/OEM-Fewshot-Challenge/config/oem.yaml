@@ -1,0 +1,55 @@
+DATA:
+  data_name: OpenEarthMap few-shot challenge
+  data_root:  # Download the 'valset' or 'testset' and set your data_root to the folder appropriately.
+  images_dir: /mnt/hdd/eric/.tmp_ipy/00.Data/Few_shot_seg_data/valset/images/  
+  labels_dir: /mnt/hdd/eric/.tmp_ipy/00.Data/Few_shot_seg_data/valset/labels/
+  data_list_path: /mnt/hdd/eric/.tmp_ipy/00.Data/Few_shot_seg_data/val.json
+  # Set to `data/val.json` for 'valset' and to `data/test.json` for 'testset'
+  novel_classes:
+    8: 'road type 2'        
+    9: 'river'               
+    10: 'boat & ship'       
+    11: 'agric land type 2' 
+  # Novel class names are below. Uncomment or comment the appropiate one
+    #********************************# 
+    # Novel classes for the 'valset' #
+    #********************************# 
+    # 8: 'road type 2'        
+    # 9: 'river'               
+    # 10: 'boat & ship'       
+    # 11: 'agric land type 2' 
+    #*********************************# 
+    # Novel classes for the 'testset' #
+    #*********************************#
+    # 8: 'vehicle & cargo-trailer'
+    # 9: 'parking space'  
+    # 10: 'sport field'
+    # 11: 'building type 2'    
+  workers: 4
+  image_size: 1024
+  mean: [0.4449, 0.4570, 0.3919] 
+  std: [0.1662, 0.1492, 0.1505] 
+  pin_memory: True
+
+MODEL:
+  model_name: PSPNet
+  encoder_name: efficientnet-b4
+  pretrained: /mnt/hdd/eric/.tmp_ipy/00.Checkpoint/FewShotSeg/model.best.pth  
+  # Download the model and set the pretrained path to `model.best.pth` file.
+
+EVALUATION:
+  shot: 5   # Only 5-shot is allowed.
+  save_pred_maps: True
+  save_ious: True  
+  batch_size_val: 1  # Only batch size 1 is supported (Evaluate one query image at a time).
+  shuffle_test_data: False
+  manual_seed: 2023
+  gpus: [0]
+
+CLASSIFIER:   # All the settings here are from the baseline paper.
+  weights: [100, 1, 1, 100]  
+  adapt_iter: 100 
+  cls_lr: 0.00125   
+  pi_estimation_strategy: self
+  pi_update_at: [10]
+  fine_tune_base_classifier: True
